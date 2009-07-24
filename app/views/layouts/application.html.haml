@@ -1,0 +1,23 @@
+!!!
+<html lang="en">
+%head
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  %title LaRuby.com
+  = stylesheet_link_tag 'reset', 'text', '960', 'application'
+
+%body
+  %div.container_16
+    %div.grid_15
+      %h1 LARuby.com
+      %ul#navigation
+        %li= link_to 'About'
+        %li= link_to 'Community'
+        %li= link_to 'Newbies'
+        %li= link_to 'Resources'
+        %li= link_to 'Presentations'
+        .clear
+    %div.grid_10#content
+      = yield
+    %div.grid_4.prefix_1#sidebar
+      %h2 Meetup
+      %p Meetup placeholder
