@@ -1,4 +1,3 @@
-<<<<<<< HEAD:.gitignore
 # ignore configuration files
 config/*.yml
 # ignore log files
@@ -9,8 +8,3 @@ tmp/**/*
 .DS_Store
 # ignore coverage files
 coverage/*
-=======
-*.DS_Store
-*/.DS_Store
-log/*.log
->>>>>>> laruby.com/master:.gitignore
