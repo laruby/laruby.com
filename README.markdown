@@ -2,3 +2,4 @@
 
 * Ron Evans
 * Daniel Fischer
+* Brian Miller
