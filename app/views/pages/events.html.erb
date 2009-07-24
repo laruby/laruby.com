@@ -1,0 +1,5 @@
+<% @events.each do |event| %>
+	<%= image_tag event.photo_url %> <%= event.name %> <%= event.time %><br />
+	<%= link_to 'Map Participants', map_path(:event_id => event.id) %>
+	<%= link_to "RSVP", event.event_url %><br /><br />
+<% end %>
