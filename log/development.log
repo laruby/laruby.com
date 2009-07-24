@@ -575,3 +575,11 @@ Processing PagesController#home (for 127.0.0.1 at 2009-07-23 21:56:41) [GET]
 Rendering template within layouts/application
 Rendering pages/home
 Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing PagesController#home (for 127.0.0.1 at 2009-07-23 21:59:35) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
