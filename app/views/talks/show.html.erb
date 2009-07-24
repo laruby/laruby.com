@@ -1,0 +1,28 @@
+<p>
+  <b>Subject:</b>
+  <%=h @talk.subject %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @talk.description %>
+</p>
+
+<p>
+  <b>Submitted by:</b>
+  <%=h @talk.submitted_by %>
+</p>
+
+<p>
+  <b>Slides link:</b>
+  <%=h @talk.slides_link %>
+</p>
+
+<p>
+  <b>Given on:</b>
+  <%=h @talk.given_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_talk_path(@talk) %> |
+<%= link_to 'Back', talks_path %>

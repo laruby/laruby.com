@@ -1,0 +1,31 @@
+<h1>New talk</h1>
+
+<% form_for(@talk) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :submitted_by %><br />
+    <%= f.text_field :submitted_by %>
+  </p>
+  <p>
+    <%= f.label :slides_link %><br />
+    <%= f.text_field :slides_link %>
+  </p>
+  <p>
+    <%= f.label :given_on %><br />
+    <%= f.datetime_select :given_on %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', talks_path %>
