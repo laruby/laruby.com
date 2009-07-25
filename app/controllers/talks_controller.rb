@@ -1,4 +1,6 @@
 class TalksController < ApplicationController
+  layout 'application'
+  
   # GET /talks
   # GET /talks.xml
   def index

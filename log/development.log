@@ -583,3 +583,9 @@ Processing PagesController#home (for 127.0.0.1 at 2009-07-23 21:59:35) [GET]
 Rendering template within layouts/application
 Rendering pages/home
 Completed in 14ms (View: 5, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#home (for 127.0.0.1 at 2009-07-24 00:52:45) [GET]
+Rendering template within layouts/application
+Rendering pages/home
+Completed in 51ms (View: 50 | 200 OK [http://localhost/]
