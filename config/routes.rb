@@ -1,6 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :talks
+	map.resource :account, :controller => "users"
+  map.resources :users
+  map.resource :user_session
+	map.login 'login', :controller => "user_sessions", :action => "new"
+
   map.root :controller => 'pages', :action => 'home'
+	map.map '/map/:event_id', :controller => 'pages', :action => 'map', :event_id => nil
+	map.events '/events', :controller => 'pages', :action => 'events'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
