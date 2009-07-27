@@ -11,13 +11,17 @@ class PagesController < ApplicationController
 	def map
 		@api = MeetupApi::Client.new('422f436d58563429753272236322037')
 		@event = @api.get_events(:id => params[:event_id], :after => '01012000').results.first
-		@rsvps = @event.get_rsvps(@api).results
+		@rsvps = @event.get_rsvps(@api, {:rsvp_types => 'yes'}).results
 		lat = BigDecimal.new("0")
 		long = BigDecimal.new("0")
-		@coords = Array.new
+		@yes = Array.new
+		@maybe = Array.new
+		@coords = Hash.new(:yes => Array.new)
+		@coords[:yes]
 		@rsvps.each do |rsvp|
 			lat += BigDecimal.new(rsvp.coord)
 			long += BigDecimal.new(rsvp.lon)
+			
 			@coords << {:lat => rsvp.coord, :long => rsvp.lon}
 		end
 		@mid_lat = (lat/@rsvps.count).ceil(13).to_s('F')
