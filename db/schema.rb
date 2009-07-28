@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090728060707) do
+ActiveRecord::Schema.define(:version => 20090728061816) do
 
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20090728060707) do
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
-  create_table "talks", :force => true do |t|
+  create_table "presentations", :force => true do |t|
     t.string   "subject"
     t.text     "description"
     t.integer  "submitted_by"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20090728060707) do
     t.datetime "last_login_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "speaker"
   end
 
 end

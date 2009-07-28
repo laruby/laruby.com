@@ -2,7 +2,30 @@
 
 - form_for @user, :url => account_path do |f|
   = f.error_messages
-  = render :partial => "form", :object => f
+  = f.label :login
+  %br
+  = f.text_field :login
+  %br
+  %br
+  = f.label :email
+  %br
+  = f.text_field :email
+  %br
+  %br
+  = f.label :speaker, "Register as a Speaker"
+  %br
+  = f.check_box :speaker
+  %br
+  %br
+  = f.label :password, f.object.new_record? ? nil : "Change password"
+  %br
+  = f.password_field :password
+  %br
+  %br
+  = f.label :password_confirmation
+  %br
+  = f.password_field :password_confirmation
+  %br
   = f.submit "Update"
   
 

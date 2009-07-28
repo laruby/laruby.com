@@ -1,6 +1,6 @@
-class CreateTalks < ActiveRecord::Migration
+class CreatePresentations < ActiveRecord::Migration
   def self.up
-    create_table :talks do |t|
+    create_table :presentations do |t|
       t.string :subject
       t.text :description
       t.integer :submitted_by
@@ -10,6 +10,6 @@ class CreateTalks < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :talks
+    drop_table :presentations
   end
 end

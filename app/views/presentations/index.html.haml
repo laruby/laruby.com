@@ -1,0 +1,10 @@
+%h1
+  Listing Requested Presentations
+- @talks.each do |talk|
+  %div{:style => "border: 1px solid grey"}
+    = h talk.subject
+    = h talk.submitted_by.name
+    %div= h talk.description
+
+%br
+= link_to 'Request a Presentation', new_talk_path

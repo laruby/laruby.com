@@ -21,5 +21,6 @@
     %div.grid_10#content
       = yield
     %div.grid_4.prefix_1#sidebar
+    - unless controller.action_name == "events"
       %h2 Meetup
-      %p Meetup placeholder
+      = render :partial => 'pages/events' 
