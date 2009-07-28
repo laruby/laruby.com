@@ -3,7 +3,7 @@
 %head
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   %title LaRuby.com
-  = javascript_include_tag 'jquery-1.3.2.min', 'juitter/jquery.juitter'
+  = javascript_include_tag 'jquery-1.3.2.min', 'juitter/jquery.juitter', 'application'
   = javascript_tag nil, {:type => "text/javascript",:src  => "http://maps.google.com/maps?file=api&amp;v=2&amp;key=#{@map_key}"} unless @map_key.nil?
   = stylesheet_link_tag 'reset', 'text', '960', 'application'
 
