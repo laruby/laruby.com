@@ -50,7 +50,7 @@ class PresentationsController < ApplicationController
     respond_to do |format|
       if @presentation.save
         flash[:notice] = 'Presentation was successfully created.'
-        format.html { redirect_to(@presentation) }
+        format.html { redirect_to presentations_path }
         format.xml  { render :xml => @presentation, :status => :created, :location => @presentation }
       else
         format.html { render :action => "new" }

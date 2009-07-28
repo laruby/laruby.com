@@ -1,7 +1,7 @@
 %h1 
-  Editing talk
+  Editing Presentation
 
-- form_for(@talk) do |f|
+- form_for(@presentation) do |f|
 = f.error_messages
 %p
   = f.label :subject
@@ -14,6 +14,6 @@
 %p
   = f.submit 'Update'
   
-= link_to 'Show', @talk 
+= link_to 'Show', @presentation 
 |
-= link_to 'Back', talks_path
+= link_to 'Back', presentations_path

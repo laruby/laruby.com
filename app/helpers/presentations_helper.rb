@@ -1,2 +1,2 @@
-module TalksHelper
+module PresentationsHelper
 end

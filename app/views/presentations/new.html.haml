@@ -1,6 +1,6 @@
 %h1
   Request or Propose a Presentation
-- form_for(@talk) do |f|
+- form_for(@presentation) do |f|
   = f.error_messages
   %p
     = f.label :subject
@@ -13,4 +13,4 @@
   %p
     = f.submit 'Request'
 
-= link_to 'Back', talks_path
+= link_to 'Back', presentations_path

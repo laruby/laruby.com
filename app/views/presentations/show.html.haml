@@ -1,23 +1,16 @@
 %p
   %b
     Subject:
-  = h @talk.subject
+  = h @presentation.subject
 %p
   %b
     Description:
-  = h @talk.description
+  = h @presentation.description
 %p
   %b
     Submitted by:
-  = h @talk.submitted_by
-%p
-  %b
-    Slides link:
-  = h @talk.slides_link
-%p
-  %b
-    Given on:
-  = h @talk.given_on
-= link_to 'Edit', edit_talk_path(@talk)
+  = h @presentation.submitted_by
+  
+= link_to 'Edit', edit_presentation_path(@presentation)
 |
-= link_to 'Back', talks_path
+= link_to 'Back', presentations_path
