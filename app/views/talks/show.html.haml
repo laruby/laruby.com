@@ -1,0 +1,23 @@
+%p
+  %b
+    Subject:
+  = h @talk.subject
+%p
+  %b
+    Description:
+  = h @talk.description
+%p
+  %b
+    Submitted by:
+  = h @talk.submitted_by
+%p
+  %b
+    Slides link:
+  = h @talk.slides_link
+%p
+  %b
+    Given on:
+  = h @talk.given_on
+= link_to 'Edit', edit_talk_path(@talk)
+|
+= link_to 'Back', talks_path

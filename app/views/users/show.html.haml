@@ -1,0 +1,13 @@
+%p
+  %b Login:
+  =h @user.login
+
+%p
+  %b Login count:
+  =h @user.login_count
+
+%p
+  %b Last login at:
+  =h @user.last_login_at
+
+= link_to 'Edit', edit_account_path
