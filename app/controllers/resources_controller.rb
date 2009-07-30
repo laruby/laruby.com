@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  #before_filter :require_user, :except => [:index, :show]
+  before_filter :require_user, :except => [:index, :show]
   
   # GET /resources
   # GET /resources.xml
@@ -43,7 +43,7 @@ class ResourcesController < ApplicationController
   # POST /resources.xml
   def create
     @resource = Resource.new(params[:resource])
-    @resource.submitted_by = @current_user.id
+    @resource.submitted_by = current_user.id
     
     respond_to do |format|
       if @resource.save

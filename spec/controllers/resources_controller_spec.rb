@@ -3,7 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe ResourcesController do
   before(:each) do
     @current_user = mock_model(User, {:id => 1})
-    @current_user.stub!(:id).and_return(1)
+		@current_user.stub!(:id).and_return(1)
+    controller.stub!(:current_user).and_return(@current_user)
   end
     
   def mock_resource(stubs={})
@@ -48,14 +49,14 @@ describe ResourcesController do
     describe "with valid params" do
       it "assigns a newly created resource as @resource" do
         Resource.stub!(:new).with({'these' => 'params'}).and_return(mock_resource(:save => true))
-        @mock_resource.stub!(:created_by).with(1)
+        mock_resource.should_receive(:submitted_by=).with(1)
         post :create, :resource => {:these => 'params'}
         assigns[:resource].should equal(mock_resource)
       end
 
       it "redirects to the created resource" do
         Resource.stub!(:new).and_return(mock_resource(:save => true))
-        @mock_resource.stub!(:created_by).with(1)
+        mock_resource.should_receive(:submitted_by=).with(1)
         post :create, :resource => {}
         response.should redirect_to(resource_url(mock_resource))
       end
@@ -63,15 +64,15 @@ describe ResourcesController do
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved resource as @resource" do
-        Resource.stub!(:new).with({'these' => 'params'}).and_return(mock_resource(:save => false))
-        @mock_resource.stub!(:created_by).with(1)
+        Resource.stub!(:new).with({'these' => 'params'}).and_return(mock_resource(:save => false))  
+				mock_resource.should_receive(:submitted_by=).with(1)     
         post :create, :resource => {:these => 'params'}
         assigns[:resource].should equal(mock_resource)
       end
 
       it "re-renders the 'new' template" do
         Resource.stub!(:new).and_return(mock_resource(:save => false))
-        @mock_resource.stub!(:created_by).with(1)
+        mock_resource.should_receive(:submitted_by=).with(1)
         post :create, :resource => {}
         response.should render_template('new')
       end

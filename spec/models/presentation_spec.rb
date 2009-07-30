@@ -12,7 +12,7 @@ describe Presentation do
   end
   
   it "should require a subject" do
-	  @presentation = Presentation.new(@valid_attributes.except(:link))
-		@presentation.should have(1).errors_on(:link)
+	  @presentation = Presentation.new(@valid_attributes.except(:subject))
+		@presentation.should have(1).errors_on(:subject)
 	end
 end
