@@ -6,6 +6,10 @@ h1#logo {
 h2 {
   border-bottom: 1px solid #ccc; }
 
+div.container_16 {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+
 ul#navigation {
   margin-bottom: 20px;
   margin-left: 0px; }
