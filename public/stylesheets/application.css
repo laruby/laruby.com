@@ -57,3 +57,7 @@ div.meetup_api_event {
     margin-bottom: 0px; }
   div.meetup_api_event span.meta {
     clear: right; }
+
+#larubyTweets img.juitterAvatar {
+  max-width: 48px;
+  max-height: 48px; }
