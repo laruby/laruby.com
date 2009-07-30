@@ -1,11 +1,16 @@
 h1#logo
-  :margin-bottom 0px
+  a
+    :text-decoration none
+    :color #000
+    :border-bottom 1px solid #ccc
+  :margin-bottom 3px
   span
     :color #ff0000
-
+span.red
+  :color #ff0000
 h2
   :border-bottom 1px solid #ccc
-
+  :font-size 16px
 
 div.container_16
   :border-left 1px solid #ccc
@@ -22,22 +27,32 @@ ul#navigation
     a
       :color #0000EE
       :text-decoration none
+      :font-weight bold
+      :font-size 14px
       &:hover
         :color #000
 
 #content
-  ul
-    li
-      :margin-left 0px
 
 #larubyTweets
   li
     :margin-bottom 10px
     :clear both
     :font-size 11px
+    :margin-left 0px
     a img
       :float left
       :margin-right 10px
     a.JRM
       :clear right
       :display block
+      
+div.meetup_api_event
+  :font-size 12px
+  img
+    :float left
+    :margin-right 10px
+  p
+    :margin-bottom 0px
+  span.meta
+    :clear right
