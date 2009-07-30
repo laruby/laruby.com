@@ -18,6 +18,8 @@ ul#navigation {
     ul#navigation li a {
       color: #0000EE;
       text-decoration: none; }
+      ul#navigation li a:hover {
+        color: #000; }
 
 #content ul li {
   margin-left: 0px; }
