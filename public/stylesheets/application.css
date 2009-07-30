@@ -6,6 +6,10 @@ h1#logo {
 h2 {
   border-bottom: 1px solid #ccc; }
 
+div.container_16 {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+
 ul#navigation {
   margin-bottom: 20px;
   margin-left: 0px; }
@@ -18,6 +22,19 @@ ul#navigation {
     ul#navigation li a {
       color: #0000EE;
       text-decoration: none; }
+      ul#navigation li a:hover {
+        color: #000; }
 
 #content ul li {
   margin-left: 0px; }
+
+#larubyTweets li {
+  margin-bottom: 10px;
+  clear: both;
+  font-size: 11px; }
+  #larubyTweets li a img {
+    float: left;
+    margin-right: 10px; }
+  #larubyTweets li a.JRM {
+    clear: right;
+    display: block; }
