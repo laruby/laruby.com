@@ -21,3 +21,14 @@ ul#navigation {
 
 #content ul li {
   margin-left: 0px; }
+
+#larubyTweets li {
+  margin-bottom: 10px;
+  clear: both;
+  font-size: 11px; }
+  #larubyTweets li a img {
+    float: left;
+    margin-right: 10px; }
+  #larubyTweets li a.JRM {
+    clear: right;
+    display: block; }
