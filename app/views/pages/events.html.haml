@@ -1,1 +1,1 @@
-= render :partial => 'events'
+= render :partial => 'events', :locals => { :events => meetup_events(@upcoming) }

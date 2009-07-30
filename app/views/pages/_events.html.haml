@@ -1,7 +1,7 @@
-- if @events.nil? or @events.count == 0
+- if events.nil? or events.count == 0
   %p No events planned
 - else
-  - @events.each do |event|
+  - events.each do |event|
     - event_date = DateTime.parse(event.time)
     = image_tag event.photo_url, {:style => "height:50px; width: 50px"} 
     = event.name 

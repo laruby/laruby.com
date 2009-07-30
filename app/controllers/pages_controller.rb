@@ -3,9 +3,7 @@ class PagesController < ApplicationController
   end
 
 	def events
-		@api = MeetupApi::Client.new('422f436d58563429753272236322037')
-		after = (params['past'].nil?) ? DateTime.now.strftime("%m%d%Y") : "01012000"
-		@events = @api.get_events(:group_id => '335039', :after => after).results
+		@upcoming = params['past'].nil?
 	end
 
 	def map
@@ -25,7 +23,7 @@ class PagesController < ApplicationController
 		end
 		@mid_lat = (lat/@coords["yes"].count).ceil(13).to_s('F')
 		@mid_long = (long/@coords["yes"].count).ceil(13).to_s('F')
-		@map_key = "12345"
+		@map_key = "ABQIAAAAudK7nG6OukhZOMUoNtqByhScB2nUqPxUv-mq5OUfXzDlWMfVYBSNjSJ3XRTs3Z3JrwaR2RDtXlFZVQ"
 		render 'map'
 	end
 end
