@@ -9,8 +9,10 @@
 
 %body
   %div.container_16
-    %div.grid_15
-      %h1 LARuby.com
+    %div.grid_16
+      %h1#logo 
+        LA<span>Ruby</span>.com
+    %div.grid_7
       %ul#navigation
         %li= link_to 'About'
         %li= link_to 'Community'
@@ -18,9 +20,9 @@
         %li= link_to 'Resources'
         %li= link_to 'Presentations'
         .clear
+    .clear
     %div.grid_10#content
       = yield
-    %div.grid_4.prefix_1#sidebar
-    - unless controller.action_name == "events"
+    %div.grid_5.prefix_1#sidebar
       %h2 Meetup
       = render :partial => 'pages/events' 
