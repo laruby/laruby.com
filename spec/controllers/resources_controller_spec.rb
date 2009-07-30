@@ -1,11 +1,16 @@
 require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ResourcesController do
-
+  before(:each) do
+    @current_user = mock_model(User, {:id => 1})
+    @current_user.stub!(:id).and_return(1)
+  end
+    
   def mock_resource(stubs={})
     @mock_resource ||= mock_model(Resource, stubs)
   end
 
+  
   describe "GET index" do
     it "assigns all resources as @resources" do
       Resource.stub!(:find).with(:all).and_return([mock_resource])
@@ -43,12 +48,14 @@ describe ResourcesController do
     describe "with valid params" do
       it "assigns a newly created resource as @resource" do
         Resource.stub!(:new).with({'these' => 'params'}).and_return(mock_resource(:save => true))
+        @mock_resource.stub!(:created_by).with(1)
         post :create, :resource => {:these => 'params'}
         assigns[:resource].should equal(mock_resource)
       end
 
       it "redirects to the created resource" do
         Resource.stub!(:new).and_return(mock_resource(:save => true))
+        @mock_resource.stub!(:created_by).with(1)
         post :create, :resource => {}
         response.should redirect_to(resource_url(mock_resource))
       end
@@ -57,12 +64,14 @@ describe ResourcesController do
     describe "with invalid params" do
       it "assigns a newly created but unsaved resource as @resource" do
         Resource.stub!(:new).with({'these' => 'params'}).and_return(mock_resource(:save => false))
+        @mock_resource.stub!(:created_by).with(1)
         post :create, :resource => {:these => 'params'}
         assigns[:resource].should equal(mock_resource)
       end
 
       it "re-renders the 'new' template" do
         Resource.stub!(:new).and_return(mock_resource(:save => false))
+        @mock_resource.stub!(:created_by).with(1)
         post :create, :resource => {}
         response.should render_template('new')
       end

@@ -3,8 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe Resource do
   before(:each) do
     @valid_attributes = {
-      :link => "value for link",
-      :description => "value for description",
+      :link => 'http://www.deadprogrammersociety.com',
+      :description => "A blog with skynet controlled blimps",
       :submitted_by => 1
     }
   end

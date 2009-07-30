@@ -1,5 +1,5 @@
 class ResourcesController < ApplicationController
-  before_filter :require_user, :except => [:index, :show]
+  #before_filter :require_user, :except => [:index, :show]
   
   # GET /resources
   # GET /resources.xml
