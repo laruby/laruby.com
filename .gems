@@ -1,1 +1,6 @@
 rails --version 2.3.3
+binarylogic-authlogic --source gems.github.com
+BRIMIL01-meetup_api --source gems.github.com
+rspec-rails
+json --version 1.1.3
+
