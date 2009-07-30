@@ -3,7 +3,7 @@
 - else
   - events.each do |event|
     - event_date = DateTime.parse(event.time)
-    = image_tag event.photo_url, {:style => "height:50px; width: 50px"} 
+    = link_to image_tag(event.photo_url, {:style => "height:50px; width: 50px"}), 'http://www.meetup.com/laruby/'
     = event.name 
     %br
     = event_date.to_formatted_s(:long) 
@@ -12,4 +12,3 @@
     = link_to "RSVP", event.event_url if (event_date > DateTime.now)
     %br
     %hr
-  

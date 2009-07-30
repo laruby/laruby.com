@@ -21,8 +21,8 @@ class PagesController < ApplicationController
 			end
 			@coords[rsvp.response] << {:lat => rsvp.coord, :long => rsvp.lon}
 		end
-		@mid_lat = (lat/@coords["yes"].count).ceil(13).to_s('F')
-		@mid_long = (long/@coords["yes"].count).ceil(13).to_s('F')
+		@mid_lat = (lat/@coords["yes"].length).ceil(13).to_s('F')
+		@mid_long = (long/@coords["yes"].length).ceil(13).to_s('F')
 		@map_key = "ABQIAAAAudK7nG6OukhZOMUoNtqByhScB2nUqPxUv-mq5OUfXzDlWMfVYBSNjSJ3XRTs3Z3JrwaR2RDtXlFZVQ"
 		render 'map'
 	end
