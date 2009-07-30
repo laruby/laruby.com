@@ -18,7 +18,7 @@ development:
   adapter: sqlite3
   encoding: utf8
   reconnect: false
-  database: laruby.com_development
+  database: db/laruby.com_development
   pool: 5
   host: localhost
 
@@ -29,6 +29,6 @@ test:
   adapter: sqlite3
   encoding: utf8
   reconnect: false
-  database: laruby.com_test
+  database: db/laruby.com_test
   pool: 5
   host: localhost
