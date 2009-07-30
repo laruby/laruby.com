@@ -52,5 +52,7 @@
 %br
 = @event.time 
 %br
-= "RSVP'd: #{image_tag "http://labs.google.com/ridefinder/images/mm_20_green.png"} #{@coords["yes"].length} Yes, #{image_tag "http://labs.google.com/ridefinder/images/mm_20_yellow.png"} #{@coords["maybe"].length} Maybe, #{image_tag "http://labs.google.com/ridefinder/images/mm_20_red.png"} #{@coords["no"].length} No"
+= "RSVP'd: #{image_tag "http://labs.google.com/ridefinder/images/mm_20_green.png"} #{@coords["yes"].length} Yes, #{image_tag "http://labs.google.com/ridefinder/images/mm_20_yellow.png"} #{@coords["maybe"].length} Maybe"
+- # Removed no until meetup api provides no rsvp responses
+- # ", #{image_tag "http://labs.google.com/ridefinder/images/mm_20_red.png"} #{@coords["no"].length} No"
 #map{:style => "height: 400px; width: 500px;"}

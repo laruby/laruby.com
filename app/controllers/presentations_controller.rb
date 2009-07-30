@@ -45,7 +45,7 @@ class PresentationsController < ApplicationController
   # POST /presentations.xml
   def create
     @presentation = Presentation.new(params[:presentation])
-    @presentation.submitted_by = @current_user.id
+    @presentation.submitted_by = current_user.id
     
     respond_to do |format|
       if @presentation.save
