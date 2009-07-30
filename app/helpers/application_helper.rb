@@ -14,7 +14,7 @@ module ApplicationHelper
 	def meetup_events(upcoming=true)
 		@api = MeetupApi::Client.new('422f436d58563429753272236322037')
 		after = (upcoming) ? DateTime.now.strftime("%m%d%Y") : "01012000"
-		@api.get_events(:group_id => '335039', :after => after).results
+		@api.get_events(:group_id => '335039', :after => after).results.reverse
 	end
 
 end
