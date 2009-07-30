@@ -25,6 +25,7 @@
       = yield
     %div.grid_5.prefix_1#sidebar
       - unless controller.action_name == "events"
-        %h2 Meetup
+        %h2
+          =link_to 'Meetup', 'http://www.meetup.com/laruby/'
         = render :partial => 'pages/events', :locals => { :events => meetup_events } 
     .clear
