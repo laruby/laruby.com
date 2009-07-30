@@ -1,10 +1,18 @@
 h1#logo {
-  margin-bottom: 0px; }
+  margin-bottom: 3px; }
+  h1#logo a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #ccc; }
   h1#logo span {
     color: #ff0000; }
 
+span.red {
+  color: #ff0000; }
+
 h2 {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #ccc;
+  font-size: 16px; }
 
 div.container_16 {
   border-left: 1px solid #ccc;
@@ -21,20 +29,35 @@ ul#navigation {
     margin-right: 10px; }
     ul#navigation li a {
       color: #0000EE;
-      text-decoration: none; }
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px; }
       ul#navigation li a:hover {
         color: #000; }
 
-#content ul li {
-  margin-left: 0px; }
 
 #larubyTweets li {
   margin-bottom: 10px;
   clear: both;
-  font-size: 11px; }
+  font-size: 11px;
+  margin-left: 0px; }
   #larubyTweets li a img {
     float: left;
     margin-right: 10px; }
   #larubyTweets li a.JRM {
     clear: right;
     display: block; }
+
+div.meetup_api_event {
+  font-size: 12px; }
+  div.meetup_api_event img {
+    float: left;
+    margin-right: 10px; }
+  div.meetup_api_event p {
+    margin-bottom: 0px; }
+  div.meetup_api_event span.meta {
+    clear: right; }
+
+#larubyTweets img.juitterAvatar {
+  max-width: 48px;
+  max-height: 48px; }

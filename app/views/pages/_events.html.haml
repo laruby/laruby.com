@@ -1,15 +1,13 @@
-- if events.nil? or events.count == 0
-  %p No events planned
-- else
-  - events.each do |event|
-    - event_date = DateTime.parse(event.time)
-    = image_tag event.photo_url, {:style => "height:50px; width: 50px"} 
-    = event.name 
-    %br
-    = event_date.to_formatted_s(:long) 
-    %br
-    = link_to 'Map Participants', map_path(:event_id => event.id)
-    = link_to "RSVP", event.event_url if (event_date > DateTime.now)
-    %br
-    %hr
-  
+%div.events
+  - if events.nil? or events.length == 0
+    %p No events planned
+  - else
+    - events.each do |event|
+      %div[event]
+        - event_date = DateTime.parse(event.time)
+        = link_to image_tag(event.photo_url, {:style => "height:50px; width: 50px"}), 'http://www.meetup.com/laruby/'
+        = link_to event.name, 'http://www.meetup.com/laruby/'
+        %p= event_date.to_formatted_s(:long) 
+        %span.meta
+          = link_to 'Map Participants', map_path(:event_id => event.id)
+          = link_to "RSVP", event.event_url if (event_date > DateTime.now)
