@@ -21,6 +21,8 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
 	config.gem "rspec", :lib => false, :version => ">= 1.2.0" 
 	config.gem "rspec-rails", :lib => false, :version => ">= 1.2.0" 
+	config.gem "haml", :version => ">= 2.2.2" 
+	config.gem "json", :lib => false, :version => "= 1.1.3" 
 	config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com/'
 	config.gem "BRIMIL01-meetup_api", :lib => 'meetup_api', :source => 'http://gems.github.com/'
 
