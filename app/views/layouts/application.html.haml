@@ -26,3 +26,12 @@
           LA<span class="red">Ruby</span> Meetup
         = render :partial => 'pages/events', :locals => { :events => meetup_events } 
     .clear
+
+  :javascript
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  :javascript
+    try {
+    var pageTracker = _gat._getTracker("UA-10121876-1");
+    pageTracker._trackPageview();
+    } catch(err) {}
