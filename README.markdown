@@ -52,5 +52,4 @@ At this point, you should get a successful test run that looks something like th
     68 examples, 0 failures
 
 
-That's it, you're ready to go!  Contact us through the [laruby-codejam](http://groups.google.com/group/laruby-codejam) Google group for more information:
-
+That's it, you're ready to go!  Contact us through the [laruby-codejam](http://groups.google.com/group/laruby-codejam) Google group for more information.
