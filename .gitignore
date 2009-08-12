@@ -1,7 +1,5 @@
 # ignore configuration files
 config/*.yml
-# ignore log files
-log/*.log
 # ignore temp folder files
 tmp/**/*
 # ignore pesky .DS_Store files
