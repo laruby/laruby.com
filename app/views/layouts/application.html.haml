@@ -11,7 +11,7 @@
   %div.container_16
     %div.grid_16
       %h1#logo 
-        = link_to 'LA<span>Ruby</span>.com', 'http://laruby.com'
+        = link_to "#{laruby}.com", 'http://laruby.com'
     %div.grid_7
       %ul#navigation
         %li= link_to 'Home', root_path
@@ -23,7 +23,8 @@
     %div.grid_5.prefix_1#sidebar
       - unless controller.action_name == "events"
         %h2
-          LA<span class="red">Ruby</span> Meetup
+          = laruby
+          Meetup
         = render :partial => 'pages/events', :locals => { :events => meetup_events } 
     .clear
 
