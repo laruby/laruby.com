@@ -28,7 +28,7 @@ class PagesController < ApplicationController
     end
     @mid_lat = (lat/@coords["yes"].length).ceil(13).to_s('F')
     @mid_long = (long/@coords["yes"].length).ceil(13).to_s('F')
-    @map_key = "ABQIAAAAudK7nG6OukhZOMUoNtqByhScB2nUqPxUv-mq5OUfXzDlWMfVYBSNjSJ3XRTs3Z3JrwaR2RDtXlFZVQ"
+    @map_key = "ABQIAAAAQ9kXGj0otum-gtsuvrHhGxSv1mxuYKFrGzW6BAW_H0SJf4RkiBQLecX1QT1s-67MtsK5CLEP6IaEng"
     render 'map'
   end
 end
