@@ -18,7 +18,7 @@ class PagesController < ApplicationController
 		
     lat = BigDecimal.new("0")
     long = BigDecimal.new("0")
-    @coords = {"yes" => Array.new(), "maybe" => Array.new(), "no" => Array.new()}
+    @coords = {"yes" => Array.new, "maybe" => Array.new, "no" => Array.new}
     @rsvps.each do |rsvp|
       if rsvp.response == "yes"
         lat += BigDecimal.new(rsvp.coord)
@@ -28,7 +28,5 @@ class PagesController < ApplicationController
     end
     @mid_lat = (lat/@coords["yes"].length).ceil(13).to_s('F')
     @mid_long = (long/@coords["yes"].length).ceil(13).to_s('F')
-    @map_key = "ABQIAAAAQ9kXGj0otum-gtsuvrHhGxSv1mxuYKFrGzW6BAW_H0SJf4RkiBQLecX1QT1s-67MtsK5CLEP6IaEng"
-    render 'map'
   end
 end
