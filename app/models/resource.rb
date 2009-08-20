@@ -3,7 +3,7 @@ class Resource < ActiveRecord::Base
   
   validates_presence_of :link, :on => :create, :message => "can't be blank"
   
-  def import_links
+  def self.import_twitter_links
     Twitter::Search.new.to('laruby').each do |r|
       if (/#resources?/.match(r.text)) and (/(https?:\/\/[^ ]+)/.match(r.text))
         begin
