@@ -15,7 +15,7 @@ class PagesController < ApplicationController
     @api = MeetupApi::Client.new('422f436d58563429753272236322037')
     @event = @api.get_events(:id => params[:event_id], :after => '01012000').results.first
     @rsvps = @event.get_rsvps(@api, :rsvp_types => "yes,no,maybe").results
-		
+
     lat = BigDecimal.new("0")
     long = BigDecimal.new("0")
     @coords = {"yes" => Array.new, "maybe" => Array.new, "no" => Array.new}
