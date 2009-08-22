@@ -8,9 +8,14 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-    if @user.save
-      flash[:notice] = "Account registered!"
-      redirect_back_or_default account_url
+    
+    # Saving without session maintenance to skip
+    # auto-login which can't happen here because
+    # the User has not yet been activated
+    if @user.save_without_session_maintenance
+      @user.deliver_activation_instructions!
+      flash[:notice] = "Your account has been created. Please check your e-mail for your account activation instructions!"
+      redirect_to root_url
     else
       render :action => :new
     end
@@ -32,5 +37,14 @@ class UsersController < ApplicationController
     else
       render :action => :edit
     end
+  end
+  
+  def activate
+    @user = User.find_using_perishable_token(params[:token], 1.week)
+    flash[:notice] = "You account is already active" and redirect_to login_url if @user.active?
+  end
+  
+  def resend_activation
+    
   end
 end

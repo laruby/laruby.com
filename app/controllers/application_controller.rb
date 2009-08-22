@@ -28,6 +28,10 @@ class ApplicationController < ActionController::Base
         return false
       end
     end
+    
+    def require_admin
+      redirect_to root_path and return false unless current_user.admin?
+    end
 
     def require_no_user
       if current_user

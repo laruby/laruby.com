@@ -1,6 +1,29 @@
 class User < ActiveRecord::Base
 	acts_as_authentic
 	
+	def admin?
+	  role == 1
+	end
+	
+	def active?
+	  active
+	end
+	
+	def activate!
+     self.active = true
+     save
+   end
+  
+  def deliver_activation_instructions
+    reset_perishable_token!
+    Mailer.deliver_activation_instructions(self)
+  end
+  
+  def deliver_activation_confirmation!
+    reset_perishable_token!
+    Notifier.deliver_activation_confirmation(self)
+  end
+	
 	def validate_meetup(email, password)
 	  #prepare for a shitty soltuion!!
 	  require 'mechanize'
@@ -20,4 +43,5 @@ class User < ActiveRecord::Base
       return id[1]
     end
   end
+
 end

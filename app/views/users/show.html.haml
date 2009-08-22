@@ -1,10 +1,11 @@
 %p
   %b Login:
   =h @user.login
-
 %p
-  %b Login count:
-  =h @user.login_count
+  %b Meetup Status:
+  = @user.meetup_id.nil? ? "Linked" : "Unlinked"
+- if @user.meetup_id.nil?
+  = link_to "Link My Account", ""
 
 %p
   %b Last login at:

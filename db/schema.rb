@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090818063213) do
+ActiveRecord::Schema.define(:version => 20090822063144) do
+
+  create_table "configurations", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "presentation_links", :force => true do |t|
     t.integer  "presentation_id"
@@ -64,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20090818063213) do
     t.string   "meetup_id"
     t.integer  "role"
     t.string   "blog_url"
+    t.boolean  "active"
   end
 
 end

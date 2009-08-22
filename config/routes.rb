@@ -1,11 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :configurations
+
   map.resources :resources
   map.resources :presentations
   map.resource :account, :controller => "users"
-  map.resources :users
+  #map.resources :users
   map.resource :user_session
   map.login 'login', :controller => "user_sessions", :action => "new"
   map.logout 'logout', :controller => "user_sessions", :action => "destroy"
+  map.activate 'activate/:token', :controller => "users", :action => "activate", :token => nil
 
   map.root :controller => 'pages', :action => 'home'
   map.map '/map/:event_id', :controller => 'pages', :action => 'map', :event_id => nil
