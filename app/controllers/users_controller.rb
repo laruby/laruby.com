@@ -42,6 +42,7 @@ class UsersController < ApplicationController
   def activate
     @user = User.find_using_perishable_token(params[:token], 1.week)
     flash[:notice] = "You account is already active" and redirect_to login_url if @user.active?
+    
   end
   
   def resend_activation
