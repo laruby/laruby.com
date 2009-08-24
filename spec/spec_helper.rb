@@ -5,7 +5,8 @@ require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
 require File.expand_path(File.dirname(__FILE__) + "/mock_helper")
 require 'spec'
 require 'spec/rails'
-
+require "webrat"
+ 
 include MockHelper
 
 Spec::Runner.configure do |config|
@@ -49,3 +50,6 @@ Spec::Runner.configure do |config|
   # For more information take a look at Spec::Example::Configuration and Spec::Runner
 end
 
+Webrat.configure do |config|
+  config.mode = :rails
+end
