@@ -1,0 +1,15 @@
+%p
+  %b
+    Link:
+  = h @resource.link
+%p
+  %b
+    Description:
+  = h @resource.description
+%p
+  %b
+    Submitted by:
+  = h @resource.submitted_by
+= link_to 'Edit', edit_resource_path(@resource)
+|
+= link_to 'Back', resources_path

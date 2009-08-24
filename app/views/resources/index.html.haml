@@ -1,0 +1,26 @@
+%h1
+  Listing resources
+%table
+  %tr
+    %th
+      Link
+    %th
+      Description
+    %th
+      Submitted by
+  - @resources.each do |resource|
+    %tr
+      %td
+        = h resource.link
+      %td
+        = h resource.description
+      %td
+        = h resource.submitted_by
+      %td
+        = link_to 'Show', resource
+      %td
+        = link_to 'Edit', edit_resource_path(resource)
+      %td
+        = link_to 'Destroy', resource, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New resource', new_resource_path

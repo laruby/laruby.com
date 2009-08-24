@@ -1,0 +1,21 @@
+%h1
+  Editing resource
+- form_for(@resource) do |f|
+  = f.error_messages
+  %p
+    = f.label :link
+    %br
+    = f.text_field :link
+  %p
+    = f.label :description
+    %br
+    = f.text_area :description
+  %p
+    = f.label :submitted_by
+    %br
+    = f.text_field :submitted_by
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @resource
+|
+= link_to 'Back', resources_path

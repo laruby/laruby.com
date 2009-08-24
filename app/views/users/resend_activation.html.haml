@@ -1,0 +1,10 @@
+%p.green= flash[:notice]
+- if @resent
+  = "Activation successfully resent"
+  %hr
+
+- form_for :resend_activation, :url => account_resend_activation_path() do |f|
+  = f.label :email, "E-Mail Address: "
+  = f.text_field :email
+  %br
+  = f.submit "Resend"
