@@ -7,16 +7,6 @@
   = f.text_field :name
   %br
   %br
-  = f.label :email
-  %br
-  = f.text_field :email
-  %br
-  %br
-  = f.label :speaker, "Register as a Speaker"
-  %br
-  = f.check_box :speaker
-  %br
-  %br
   = f.label :password, f.object.new_record? ? nil : "Change password"
   %br
   = f.password_field :password

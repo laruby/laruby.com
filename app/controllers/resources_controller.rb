@@ -1,4 +1,5 @@
 class ResourcesController < ApplicationController
+  layout 'application'
   before_filter :require_user, :except => [:index, :show]
   
   # GET /resources

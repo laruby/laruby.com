@@ -3,7 +3,10 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :resources
   map.resources :presentations
-  map.resource :account, :controller => "users"
+  map.resource :account, :controller => "users" do |account|
+    account.link_meetup 'link', :action => 'link_meetup_account', :controller => "users"
+    account.resend_activation 'resend_activation', :action => 'resend_activation', :controller => "users"
+  end
   #map.resources :users
   map.resource :user_session
   map.login 'login', :controller => "user_sessions", :action => "new"

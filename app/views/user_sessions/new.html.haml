@@ -2,9 +2,9 @@
 
 - form_for @user_session, :url => user_session_path do |f|
   = f.error_messages
-  = f.label :login
+  = f.label :email
   %br
-  = f.text_field :login
+  = f.text_field :email
   %br
   %br
   = f.label :password

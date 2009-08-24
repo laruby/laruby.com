@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
-	acts_as_authentic
+	acts_as_authentic do |c|
+    c.logged_in_timeout = 20.minutes # default is 10.minutes
+    c.login_field = :email
+  end
+  
+  before_create :check_role
 	
 	def admin?
 	  role == 1
@@ -19,15 +24,17 @@ class User < ActiveRecord::Base
     Mailer.deliver_activation_instructions(self)
   end
   
-  def deliver_activation_confirmation!
+  def deliver_activation_confirmation
     reset_perishable_token!
     Notifier.deliver_activation_confirmation(self)
+  end
+  
+  def check_role
+    self.role = 3 if role.nil? #set role to user if nil
   end
 	
 	def validate_meetup(email, password)
 	  #prepare for a shitty soltuion!!
-	  require 'mechanize'
-
     agent = WWW::Mechanize.new
     agent.user_agent_alias = 'Mac Safari'
     page = agent.get("http://meetup.com/login/")

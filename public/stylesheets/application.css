@@ -9,6 +9,8 @@ h1#logo {
 
 span.red {
   color: #ff0000; }
+span.green {
+  color: green;}
 
 h2 {
   border-bottom: 1px solid #ccc;

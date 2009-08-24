@@ -1,11 +1,29 @@
+%p.green= flash[:notice]
 %p
-  %b Login:
-  =h @user.login
-%p
-  %b Meetup Status:
-  = @user.meetup_id.nil? ? "Linked" : "Unlinked"
-- if @user.meetup_id.nil?
-  = link_to "Link My Account", ""
+  %b Email:
+  =h @user.email
+- if @user.meetup_id.nil? or @user.meetup_id.empty?
+  %div
+    %b Meetup Status: 
+    Unlinked
+    = link_to "Link My Account", "#", {:class => "toggler"}
+    .toggled
+      - form_for :meetup_link, :url => account_link_meetup_path() do |f|
+        = f.label :user_id, "Meetup Login ID: "
+        = "#{f.text_field :user_id}<br />"
+        = f.label :password, "Meetup Password: "
+        = "#{f.password_field :password}<br />"
+        = f.submit "Link"
+        = "<br /><br />---- OR ----<br /><br />"
+        = f.label :link, "Meetup Profile Link"
+        = "#{f.text_field :link}<br />"
+        = f.submit "Link"
+  %br
+- else
+  %p
+    %b Meetup Status: 
+    Linked
+    
 
 %p
   %b Last login at:

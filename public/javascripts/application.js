@@ -19,6 +19,12 @@ $(document).ready(function() {
 		openExternalLinks:"newWindow", // here you can choose how to open link to external websites, "newWindow" or "sameWindow"
     filter:"sex->*BAD word*,porn->*BAD word*,fuck->*BAD word*,shit->*BAD word*"  // insert the words you want to hide from the tweets followed by what you want to show instead example: "sex->censured" or "porn->BLOCKED WORD" you can define as many as you want, if you don't want to replace the word, simply remove it, just add the words you want separated like this "porn,sex,fuck"... Be aware that the tweets will still be showed, only the bad words will be removed
 	});
+	
+	$('.toggled').hide();
+	$('.toggler').click(function(e){
+	  e.preventDefault();
+	  $(this).next('div.toggled').toggle('blind');
+	});
 	        
         
 });
