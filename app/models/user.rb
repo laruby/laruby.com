@@ -10,6 +10,14 @@ class User < ActiveRecord::Base
 	  role == 1
 	end
 	
+	def moderator?
+	  role <= 2
+	end
+	
+	def user?
+	  role <= 3
+	end
+	
 	def active?
 	  active
 	end
