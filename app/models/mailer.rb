@@ -6,7 +6,7 @@ class Mailer < ActionMailer::Base
     recipients user.email
     from       "LA Ruby #{LARUBY_EMAIL}"
     sent_on    Time.now   
-    body       :account_activation_url => activate_url(user.perishable_token, {:host => "localhost:3000"})
+    body       :account_activation_url => activate_url(user.perishable_token)
   end
   
   def activation_confirmation(user)
