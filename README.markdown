@@ -25,13 +25,13 @@ Getting started is easy:
 
     $ sudo gem install -v 2.3.3 rails
 
-3. Install the required gems.
-
-    $ sudo rake gems:install
-
-4. Copy database.yml.init to database.yml.
+3. Copy database.yml.init to database.yml.
 
     $ cp config/database.yml.init config/database.yml
+
+4. Install the required gems.
+
+    $ sudo rake gems:install
 
 5. Create the database and load the schema.
 
