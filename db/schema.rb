@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090824054542) do
+ActiveRecord::Schema.define(:version => 20090824071246) do
 
   create_table "configurations", :force => true do |t|
     t.string   "name"
@@ -54,14 +54,14 @@ ActiveRecord::Schema.define(:version => 20090824054542) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.string   "email",                              :null => false
-    t.string   "crypted_password",                   :null => false
-    t.string   "password_salt",                      :null => false
-    t.string   "persistence_token",                  :null => false
-    t.string   "single_access_token",                :null => false
-    t.string   "perishable_token",                   :null => false
-    t.integer  "login_count",         :default => 0, :null => false
-    t.integer  "failed_login_count",  :default => 0, :null => false
+    t.string   "email",                                  :null => false
+    t.string   "crypted_password",                       :null => false
+    t.string   "password_salt",                          :null => false
+    t.string   "persistence_token",                      :null => false
+    t.string   "single_access_token",                    :null => false
+    t.string   "perishable_token",                       :null => false
+    t.integer  "login_count",         :default => 0,     :null => false
+    t.integer  "failed_login_count",  :default => 0,     :null => false
     t.datetime "last_login_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20090824054542) do
     t.string   "meetup_id"
     t.integer  "role"
     t.string   "blog_url"
-    t.boolean  "active"
+    t.boolean  "active",              :default => false, :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.string   "last_login_ip"
