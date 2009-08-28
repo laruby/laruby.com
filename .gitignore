@@ -6,3 +6,5 @@ tmp/**/*
 .DS_Store
 # ignore coverage files
 coverage/*
+.autosession.vim
+*.swp
