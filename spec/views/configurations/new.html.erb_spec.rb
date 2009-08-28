@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../../spec_helper')
 
-describe "/configurations/new.html.erb" do
+describe "/configurations/new" do
   include ConfigurationsHelper
 
   before(:each) do

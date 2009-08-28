@@ -2,15 +2,20 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 
 describe ConfigurationsController do
 
+  before(:each) do
+    controller.stub!(:require_user)
+    controller.stub!(:require_admin)
+  end
+
   def mock_configuration(stubs={})
-    @mock_configuration ||= mock_model(Configuration, stubs)
+    @configuration ||= mock_model(Configuration, stubs)
   end
 
   describe "GET index" do
     it "assigns all configurations as @configurations" do
-      Configuration.stub!(:find).with(:all).and_return([mock_configuration])
+      Configuration.should_receive(:find).with(:all).and_return(:configurations)
       get :index
-      assigns[:configurations].should == [mock_configuration]
+      assigns[:configurations].should == :configurations
     end
   end
 
@@ -18,7 +23,7 @@ describe ConfigurationsController do
     it "assigns the requested configuration as @configuration" do
       Configuration.stub!(:find).with("37").and_return(mock_configuration)
       get :show, :id => "37"
-      assigns[:configuration].should equal(mock_configuration)
+      assigns[:configuration].should == mock_configuration
     end
   end
 
@@ -26,7 +31,7 @@ describe ConfigurationsController do
     it "assigns a new configuration as @configuration" do
       Configuration.stub!(:new).and_return(mock_configuration)
       get :new
-      assigns[:configuration].should equal(mock_configuration)
+      assigns[:configuration].should == mock_configuration
     end
   end
 
@@ -34,7 +39,7 @@ describe ConfigurationsController do
     it "assigns the requested configuration as @configuration" do
       Configuration.stub!(:find).with("37").and_return(mock_configuration)
       get :edit, :id => "37"
-      assigns[:configuration].should equal(mock_configuration)
+      assigns[:configuration].should == mock_configuration
     end
   end
 
@@ -44,7 +49,7 @@ describe ConfigurationsController do
       it "assigns a newly created configuration as @configuration" do
         Configuration.stub!(:new).with({'these' => 'params'}).and_return(mock_configuration(:save => true))
         post :create, :configuration => {:these => 'params'}
-        assigns[:configuration].should equal(mock_configuration)
+        assigns[:configuration].should == mock_configuration
       end
 
       it "redirects to the created configuration" do
@@ -58,7 +63,7 @@ describe ConfigurationsController do
       it "assigns a newly created but unsaved configuration as @configuration" do
         Configuration.stub!(:new).with({'these' => 'params'}).and_return(mock_configuration(:save => false))
         post :create, :configuration => {:these => 'params'}
-        assigns[:configuration].should equal(mock_configuration)
+        assigns[:configuration].should == mock_configuration
       end
 
       it "re-renders the 'new' template" do
@@ -82,7 +87,7 @@ describe ConfigurationsController do
       it "assigns the requested configuration as @configuration" do
         Configuration.stub!(:find).and_return(mock_configuration(:update_attributes => true))
         put :update, :id => "1"
-        assigns[:configuration].should equal(mock_configuration)
+        assigns[:configuration].should == mock_configuration
       end
 
       it "redirects to the configuration" do
@@ -102,7 +107,7 @@ describe ConfigurationsController do
       it "assigns the configuration as @configuration" do
         Configuration.stub!(:find).and_return(mock_configuration(:update_attributes => false))
         put :update, :id => "1"
-        assigns[:configuration].should equal(mock_configuration)
+        assigns[:configuration].should == mock_configuration
       end
 
       it "re-renders the 'edit' template" do

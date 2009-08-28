@@ -5,7 +5,7 @@ class ConfigurationsController < ApplicationController
   # GET /configurations
   # GET /configurations.xml
   def index
-    @configurations = Configuration.all
+    @configurations = Configuration.find(:all)
 
     respond_to do |format|
       format.html # index.html.erb
