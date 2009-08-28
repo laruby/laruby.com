@@ -7,6 +7,6 @@ class LoadDefaultConfigurationKeys < ActiveRecord::Migration
   end
 
   def self.down
-    User.delete_all
+    Configuration.delete_all
   end
 end
