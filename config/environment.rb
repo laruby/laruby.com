@@ -27,6 +27,7 @@ Rails::Initializer.run do |config|
 	config.gem "BRIMIL01-meetup_api", :lib => 'meetup_api', :source => 'http://gems.github.com/'
 	config.gem "twitter"
 	config.gem "mechanize"
+	config.gem "cucumber", :version => "~> 0.3.98"
   # Only include action_mailer_tls for ruby 1.8.6
 	`/usr/bin/env ruby -v`.match(/^ruby (\d)\.(\d)\.(\d)/)
 	RUBY_VERSION_NUM = "#{$1}#{$2}#{$3}".to_i
