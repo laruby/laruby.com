@@ -10,10 +10,27 @@
 
 body {
 	font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+  background: #F9F9F9 none repeat scroll 0 0;
+  padding: 20px;
 }
 
 a:focus {
 	outline: 1px dotted invert;
+}
+
+a:link {
+  color: #3256B6;
+  font-style: none;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover, a:visited:hover {
+  color: #C61A1A; 
+  text-decoration: underline;
 }
 
 hr {

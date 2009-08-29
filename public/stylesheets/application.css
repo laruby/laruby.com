@@ -4,11 +4,9 @@ h1#logo {
     text-decoration: none;
     color: #000;
     border-bottom: 1px solid #ccc; }
-  h1#logo span {
-    color: #ff0000; }
 
 span.red {
-  color: #ff0000; }
+  color: #C61A1A; }
 span.green {
   color: green;}
 
@@ -17,8 +15,8 @@ h2 {
   font-size: 16px; }
 
 div.container_16 {
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc; }
+  background: #FFF none repeat scroll 0 0;
+  border: 1px solid #ccc; }
 
 ul#navigation {
   margin-bottom: 20px;
@@ -30,12 +28,12 @@ ul#navigation {
     text-decoration: none;
     margin-right: 10px; }
     ul#navigation li a {
-      color: #0000EE;
+      color: #3256B6;
       text-decoration: none;
       font-weight: bold;
       font-size: 14px; }
       ul#navigation li a:hover {
-        color: #000; }
+        color: #C61A1A; }
 
 
 #larubyTweets li {

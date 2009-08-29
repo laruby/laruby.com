@@ -2,27 +2,25 @@
   = laruby
   on the web
 %ul
-  %li= link_to 'Meetup.com', 'http://www.meetup.com/laruby/'
   %li
-    Follow
-    = link_to 'laruby', 'http://twitter.com/laruby'
-    on twitter
+    = link_to_new_window 'Meetup.com', 'http://www.meetup.com/laruby/'
   %li
-    = link_to 'LinkedIn', 'http://www.linkedin.com/groups?gid=1089287'
-    group
+    = link_to_new_window 'Twitter', 'http://twitter.com/laruby'
   %li
-    = laruby
-    = link_to 'Code Jam', 'http://groups.google.com/group/laruby-codejam'
+    = link_to_new_window 'Facebook', 'http://www.facebook.com/group.php?gid=70061197785'
   %li
-    IRC:
-    /*%b #laruby*/
-    = link_to '#laruby', 'irc://irc.freenode.net/laruby'
-    or
-    = link_to 'web irc', 'http://webchat.freenode.net/'
+    = link_to_new_window 'LinkedIn', 'http://www.linkedin.com/groups?gid=1089287'
   %li
-    = link_to 'laruby', 'http://github.com/laruby'
-    on Github
+    = link_to_new_window 'Code Jam', 'http://groups.google.com/group/laruby-codejam'
+  -# This should be in a contact us section or something
+  -#%li
+    -#IRC:
+    -#= link_to '#laruby', 'irc://irc.freenode.net/laruby'
+    -#or
+    -#<a href="http://webchat.freenode.net/" target="_blank">web irc</a>
+  %li
+    = link_to_new_window 'Github', 'http://github.com/laruby'
 %h2
-  == #{laruby}
+  == ##{laruby}
   on Twitter
 #larubyTweets

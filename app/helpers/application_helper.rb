@@ -21,4 +21,8 @@ module ApplicationHelper
   def laruby
     'LA<span class="red">Ruby</span>'
   end
+
+  def link_to_new_window(link_copy, href)
+    "<a href='#{href}' target='_blank'>#{link_copy}</a>"
+  end
 end
