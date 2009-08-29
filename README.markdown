@@ -67,4 +67,4 @@ At this point, you should get a successful test run that looks something like th
     4 steps (4 passed)
     0m0.306s
 
-That's it, you're ready to go!  Contact us through the [laruby-codejam](http://groups.google.com/group/laruby-codejam) Google group or [#laruby](irc://irc.freenode.net/laruby] irc channel on freenode for more information.
+That's it, you're ready to go!  Contact us through the [laruby-codejam](http://groups.google.com/group/laruby-codejam) Google group or [#laruby](irc://irc.freenode.net/laruby) irc channel on freenode for more information.
