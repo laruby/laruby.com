@@ -1,9 +1,14 @@
 h1#logo {
-  margin-bottom: 3px; }
+  margin-bottom: 3px;
+  float: left; }
   h1#logo a {
     text-decoration: none;
     color: #000;
     border-bottom: 1px solid #ccc; }
+
+div.login {
+  font-size: 10px;
+  margin-top: 5px; }
 
 span.red {
   color: #C61A1A; }
