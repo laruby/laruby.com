@@ -9,14 +9,14 @@
   = stylesheet_link_tag 'reset', 'text', '960', 'application'
 
 %body
-  %div.container
-    %div.container_16
-      %div.grid_16
+  .container
+    .container_16
+      .grid_16
         %h1#logo 
           = link_to "#{laruby}.com", 'http://laruby.com'
-        %div.right.login
+        .right.login
           = link_to 'Login'
-      %div.grid_7
+      .grid_7
         %ul#navigation
           %li= link_to 'Home', root_path
           %li= link_to 'Connect', static_page_path(:page => 'connect')
@@ -26,9 +26,9 @@
         -#= navigation "navigation"
         -#.clear
       .clear
-      %div.grid_10#content
+      .grid_10#content
         = yield
-      %div.grid_5.prefix_1#sidebar
+      .grid_5.prefix_1#sidebar
         - unless controller.action_name == "events"
           %h2
             = laruby
@@ -37,7 +37,7 @@
       .clear
     -# too tired to figure this out right now
     -# would like to use helper to get er dun
-    -#%div.footer
+    -#.footer
       -#%ul#footer_navigation
         -#%li= link_to 'Home', root_path
         -#%li= link_to 'Connect', static_page_path(:page => 'connect')
