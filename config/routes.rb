@@ -16,7 +16,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => 'pages', :action => 'home'
   map.map '/map/:event_id', :controller => 'pages', :action => 'map', :event_id => nil
   map.events '/events/:past', :controller => 'pages', :action => 'events', :past => nil
-  map.static_page ':page', :controller => 'pages', :action => 'show', :page => /about|contact|newbies|community|resources/
+  map.static_page ':page', :controller => 'pages', :action => 'show', :page => /about|contact|newbies|community|resources|connect/
 
   # The priority is based upon order of creation: first created -> highest priority.
 

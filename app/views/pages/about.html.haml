@@ -1,24 +1,27 @@
-%h2 About laruby
+-# Page needs to be thought through more as far as copy goes
+-# if we do the whole maps thing, maybe have it load in a hidden div or something
+%h2 About #{laruby}
 %p
-  LA Ruby is a roving programming group that started meeting in September 2006.  Our meetings are on the second Thursday of each month,
-  and we are always looking for new locations to meet.  Our previous hosts include:
+  #{laruby} is a roving programming group that started meeting in September 2006. 
+  Our members are web developers, system administrators, QA engineers, and others.
+  Our members are hobbyists and professionals, experts and neophytes.
+  Our meetings are regular and at least monthy.
+  we are always looking for new locations to meet.  Our previous hosts include:
   %ul
     %li Los Angeles Times
     %li UCLA
     %li AT&amp;T Interactive
-    %li= link_to 'CPO Commerce, Inc.', 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=120+W+Bellevue+Dr,+Pasadena,+CA+91105&sll=37.0625,-95.677068&sspn=39.099308,87.275391&ie=UTF8&ll=34.138325,-118.152981&spn=0.009999,0.021307&z=16&iwloc=A'
+    %li= link_to_new_window 'CPO Commerce, Inc.', 'http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=120+W+Bellevue+Dr,+Pasadena,+CA+91105&sll=37.0625,-95.677068&sspn=39.099308,87.275391&ie=UTF8&ll=34.138325,-118.152981&spn=0.009999,0.021307&z=16&iwloc=A'
 
 %h2 Presentations
 %p
-  Presentations have covered Ruby and associated development tools.  Our members are web developers, system administrators, QA engineers,
-  and others.  Our Rubyists are hobbyists and professionals, experts and neophytes.
+  Presentations have covered Ruby and associated development tools. 
 
-%h2 About laruby.com
+%h2 About the #{laruby}.com website
 %p
-  laruby.com is a collaborative effort of LA Ruby.
-%p
-  See the meetup page for more information:
-  = link_to 'LA Ruby Meetup', 'http://meetup.com/laruby'
-%p
-  Source code available on github:
-  = link_to 'Source Code', 'http://github.com/laruby/laruby.com/tree/master'
+  laruby.com is a collaborative effort of #{laruby} and is completely open source. You are welcome to 
+  browse the source on 
+  = link_to_new_window 'Github', 'http://github.com/laruby/laruby.com/tree/master'
+  and please feel free to contribute. Hosting for the website is provided by
+  = link_to_new_window 'Heroku', 'http://heroku.com/'
+  who has done a fabulous job. Thank you very much!

@@ -25,4 +25,16 @@ module ApplicationHelper
   def link_to_new_window(link_copy, href)
     "<a href='#{href}' target='_blank'>#{link_copy}</a>"
   end
+
+  def navigation
+    #%li= link_to 'Home', root_path
+    #%li= link_to 'Connect', static_page_path(:page => 'connect')
+    #%li= link_to 'About', static_page_path(:page => 'about')
+    rtn = ""
+    rtn << "#{%li= link_to 'Home', root_path\n}"
+    #rtn << "#{link_to 'Connect', static_page_path(:page => 'connect')}"
+    #rtn << "#{link_to 'About', static_page_path(:page => 'about')}"
+
+    return rtn
+  end
 end
