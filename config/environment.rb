@@ -46,4 +46,3 @@ Rails::Initializer.run do |config|
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
 end
-require 'bigdecimal'
