@@ -25,7 +25,7 @@ Rails::Initializer.run do |config|
 
   ##
   # Development gems.
-  if %(development test).include? RAILS_ENV
+  if %(development test cucumber).include? RAILS_ENV
     config.gem "webrat", :version => "0.5.3"
     config.gem "rspec", :lib => false, :version => "1.2.8"
     config.gem "rspec-rails", :lib => false, :version => "1.2.7.1"
