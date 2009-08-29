@@ -7,16 +7,14 @@ h1#logo {
 
 span.red {
   color: #C61A1A; }
-span.green {
-  color: green;}
 
 h2 {
   border-bottom: 1px solid #ccc;
   font-size: 16px; }
 
 div.container_16 {
-  background: #FFF none repeat scroll 0 0;
-  border: 1px solid #ccc; }
+  border: 1px solid #ccc;
+  background: #FFF none repeat scroll 0 0; }
 
 ul#navigation {
   margin-bottom: 20px;
@@ -35,6 +33,28 @@ ul#navigation {
       ul#navigation li a:hover {
         color: #C61A1A; }
 
+div.footer {
+  margin: auto;
+  width: 150px;
+  padding-bottom: 15px;
+  font-size: 10px; }
+
+div.footer ul#footer_nav {
+  margin-bottom: 20px;
+  margin-left: 0px; }
+  div.footer ul#footer_nav li {
+    margin-left: 0px;
+    float: left;
+    list-style: none;
+    text-decoration: none;
+    margin-right: 10px; }
+    div.footer ul#footer_nav li a {
+      color: #3256B6;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px; }
+      div.footer ul#footer_nav li a:hover {
+        color: #C61A1A; }
 
 #larubyTweets li {
   margin-bottom: 10px;

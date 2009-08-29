@@ -6,10 +6,5 @@ tmp/**/*
 .DS_Store
 # ignore coverage files
 coverage/*
-# if we have any windows users
-Thumbs.db
-
-
-# individual prefs
-.autosession.vim
-*.swp
+# ignore cache files created by sass
+.sass-cache

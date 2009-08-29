@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   %title #{laruby}.com
   = javascript_include_tag 'jquery-1.3.2.min', 'juitter/jquery.juitter', 'application'
-  = javascript_tag nil, {:type => "text/javascript",:src  => "http://maps.google.com/maps?file=api&amp;v=2&amp;key=#{MAP_API_KEYS[request.host]}"}
+  -#= javascript_tag nil, {:type => "text/javascript",:src  => "http://maps.google.com/maps?file=api&amp;v=2&amp;key=#{MAP_API_KEYS[request.host]}"}
   = stylesheet_link_tag 'reset', 'text', '960', 'application'
 
 %body
@@ -16,8 +16,13 @@
           = link_to "#{laruby}.com", 'http://laruby.com'
       %div.grid_7
         %ul#navigation
-          = navigation
+          %li= link_to 'Home', root_path
+          %li= link_to 'Connect', static_page_path(:page => 'connect')
+          %li= link_to 'About', static_page_path(:page => 'about')
           .clear
+        -# Not working yet but would like to...may be waste of time
+        -#= navigation "navigation"
+        -#.clear
       .clear
       %div.grid_10#content
         = yield
@@ -28,8 +33,12 @@
             Meetup
           = render :partial => 'pages/events', :locals => { :events => meetup_events } 
       .clear
-    %div.footer
-      HI MOM
+    -# too tired to figure this out right now
+    -#%div.footer
+      -#%ul#footer_navigation
+        -#%li= link_to 'Home', root_path
+        -#%li= link_to 'Connect', static_page_path(:page => 'connect')
+        -#%li= link_to 'About', static_page_path(:page => 'about')
 
   :javascript
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
