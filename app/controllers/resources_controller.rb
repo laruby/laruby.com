@@ -1,7 +1,6 @@
 class ResourcesController < ApplicationController
-  layout 'application'
   before_filter :require_user, :except => [:index, :show]
-  
+
   # GET /resources
   # GET /resources.xml
   def index
@@ -45,7 +44,7 @@ class ResourcesController < ApplicationController
   def create
     @resource = Resource.new(params[:resource])
     @resource.submitted_by = current_user.id
-    
+
     respond_to do |format|
       if @resource.save
         flash[:notice] = 'Resource was successfully created.'

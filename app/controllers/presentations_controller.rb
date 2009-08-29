@@ -1,7 +1,6 @@
 class PresentationsController < ApplicationController
-  layout 'application'
   before_filter :require_user, :except => [:index, :show]
-  
+
   # GET /presentations
   # GET /presentations.xml
   def index
@@ -28,7 +27,7 @@ class PresentationsController < ApplicationController
   # GET /presentations/new.xml
   def new
     @presentation = Presentation.new
-    
+
 
     respond_to do |format|
       format.html # new.html.erb
@@ -46,7 +45,7 @@ class PresentationsController < ApplicationController
   def create
     @presentation = Presentation.new(params[:presentation])
     @presentation.submitted_by = current_user.id
-    
+
     respond_to do |format|
       if @presentation.save
         flash[:notice] = 'Presentation was successfully created.'
