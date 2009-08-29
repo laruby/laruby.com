@@ -20,6 +20,7 @@ describe Resource do
 
   describe "twitter import" do
     it "should import tweets with #resource and a http link" do
+      pending
       good_tweet = Mash.new({:text => "#resource for http://something-good.com/"})
       bad_tweet = Mash.new({:text => "a link for http://something-bad.com/"})
       twitter = mock(Twitter::Search)
