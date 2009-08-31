@@ -41,24 +41,23 @@ ul#navigation {
 div.footer {
   margin: auto;
   width: 150px;
-  padding-bottom: 15px;
-  font-size: 10px; }
+  padding-bottom: 15px; }
 
-div.footer ul#footer_nav {
+div.footer ul#navigation {
   margin-bottom: 20px;
   margin-left: 0px; }
-  div.footer ul#footer_nav li {
+  div.footer ul#navigation li {
     margin-left: 0px;
     float: left;
     list-style: none;
     text-decoration: none;
     margin-right: 10px; }
-    div.footer ul#footer_nav li a {
+    div.footer ul#navigation li a {
       color: #3256B6;
       text-decoration: none;
       font-weight: bold;
-      font-size: 14px; }
-      div.footer ul#footer_nav li a:hover {
+      font-size: 10px; }
+      div.footer ul#navigation li a:hover {
         color: #C61A1A; }
 
 #larubyTweets li {

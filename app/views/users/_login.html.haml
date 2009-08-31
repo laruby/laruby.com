@@ -1,0 +1,22 @@
+.right.login
+  -# Will need to check if one has been clicked before the other
+  = link_to_function 'Login', '$(".login_box").toggle(); $(".register_box").hide();'
+  |
+  = link_to_function 'Register', '$(".register_box").toggle(); $(".login_box").hide();'
+
+%form.login_box.hidden
+  Email
+  %input 
+  Password
+  %input
+  %input{:type => 'submit', :value => "Login"}
+
+%form.register_box.hidden{:action => "login"}
+  Email
+  %input
+  Password
+  %input
+  Confirm Password
+  %input
+  %input{:type => 'submit', :value => "Register"}
+

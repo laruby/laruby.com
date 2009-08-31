@@ -22,6 +22,7 @@ module ApplicationHelper
     'LA<span class="red">Ruby</span>'
   end
 
+  # This may already be possible in HAML, but I don't know how to do it atm
   def link_to_new_window(link_copy, href)
     "<a href='#{href}' target='_blank'>#{link_copy}</a>"
   end

@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.login 'login', :controller => "user_sessions", :action => "new"
   map.logout 'logout', :controller => "user_sessions", :action => "destroy"
+  map.register 'register', :controller => "users", :action => "new"
   map.activate 'activate/:token', :controller => "users", :action => "activate", :token => nil
 
   map.root :controller => 'pages', :action => 'home'

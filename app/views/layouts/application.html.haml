@@ -14,17 +14,9 @@
       .grid_16
         %h1#logo 
           = link_to "#{laruby}.com", root_path
-        .right.login
-          = link_to 'Login'
+        = render :partial => 'users/login'
       .grid_7
-        %ul#navigation
-          %li= link_to 'Home', root_path
-          %li= link_to 'Connect', static_page_path(:page => 'connect')
-          %li= link_to 'About', static_page_path(:page => 'about')
-          .clear
-        -# Not working yet but would like to...may be waste of time
-        -#= navigation "navigation"
-        -#.clear
+        = render :partial => 'pages/navigation'
       .clear
       .grid_10#content
         = yield
@@ -35,13 +27,8 @@
             Meetup
           = render :partial => 'pages/events', :locals => { :events => meetup_events } 
       .clear
-    -# too tired to figure this out right now
-    -# would like to use helper to get er dun
-    -#.footer
-      -#%ul#footer_navigation
-        -#%li= link_to 'Home', root_path
-        -#%li= link_to 'Connect', static_page_path(:page => 'connect')
-        -#%li= link_to 'About', static_page_path(:page => 'about')
+    .footer
+      = render :partial => 'pages/navigation'
 
   :javascript
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
