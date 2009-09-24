@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20090824071246) do
     t.string   "meetup_id"
     t.integer  "role"
     t.string   "blog_url"
-    t.boolean  "active",              :default => false
+    t.boolean  "active",              :default => false, :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.string   "last_login_ip"
