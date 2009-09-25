@@ -10,7 +10,12 @@ module NavigationHelpers
     
     when /the homepage/
       '/'
-    
+    when /the presentation index/
+      presentations_path
+    when /the login page/
+      login_path
+    when /the new presentation page/
+      new_presentation_path
     # Add more mappings here.
     # Here is a more fancy example:
     #

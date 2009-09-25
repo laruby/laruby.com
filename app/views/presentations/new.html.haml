@@ -7,6 +7,25 @@
     %br
     = f.text_field :subject
   %p
+    = f.label :difficulty_level
+    %br
+    = f.select :difficulty_level, ['Beginner', 'Intermediate', 'Advanced']
+  %p
+    = f.label :duration
+    = f.text_field :duration
+    #duration_slider
+    :javascript
+      $(function () {
+        $('#duration_slider').slider({
+          min: 15,
+          max: 90,
+          step: 15,
+          slide: function(event, ui) {
+            $("#presentation_duration").val(ui.value);
+          }
+        })
+      })
+  %p
     = f.label :description
     %br
     = f.text_area :description
