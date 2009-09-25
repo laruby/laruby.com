@@ -15,7 +15,12 @@
         %h1#logo 
           = link_to "#{laruby}.com", 'http://laruby.com'
         .right.login
-          = link_to 'Login'
+          - if current_user
+            = link_to 'Logout', logout_path 
+          - else
+            = link_to 'Login', login_path
+            |
+            = link_to 'Register', new_account_path
       .grid_7
         %ul#navigation
           %li= link_to 'Home', root_path
