@@ -33,6 +33,16 @@
         -#.clear
       .clear
       .grid_10#content
+        - if flash[:notice]
+          .ui-widget
+            .ui-state-highlight.ui-corner-all{:style => 'padding: 5px;'}
+              .ui-icon.ui-icon-info{:style => 'float: left; margin-right: 5px;'}
+              = flash[:notice]
+        - if flash[:error]
+          .ui-widget
+            .ui-state-error.ui-corner-all{:style => 'padding: 5px;'}
+              .ui-icon.ui-icon-alert{:style => 'float: left; margin-right: 5px;'}
+              = flash[:error]
         = yield
       .grid_5.prefix_1#sidebar
         - unless controller.action_name == "events"
