@@ -4,4 +4,8 @@ class Presentation < ActiveRecord::Base
   
   validates_presence_of :subject, :on => :create, :message => "can't be blank"
   
+  named_scope :proposed, :conditions => {:presentation_date => nil}
+  named_scope :upcoming, :conditions => ['presentation_date >= ?', Date.today]
+  named_scope :past, :conditions => ['presentation_date < ?', Date.today]
+  
 end

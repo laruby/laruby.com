@@ -1,0 +1,23 @@
+%h2
+  = laruby
+  Presentations
+
+%h3
+  Upcoming
+  %ul
+    - Presentation.upcoming.each do |presentation|
+      %li= link_to presentation.subject, presentation
+
+%h3
+  Prososed
+  %ul
+    - Presentation.proposed.each do |presentation|
+      %li= link_to presentation.subject, presentation
+  
+%h3
+  Past
+  %ul
+    - Presentation.past.each do |presentation|
+      %li= link_to presentation.subject, presentation
+    
+%div= link_to 'Propose a new presentation', new_presentation_path

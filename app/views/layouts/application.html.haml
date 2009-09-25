@@ -40,6 +40,7 @@
             = laruby
             Meetup
           = render :partial => 'pages/events', :locals => { :events => meetup_events } 
+          = yield :sidebar
       .clear
     -# too tired to figure this out right now
     -# would like to use helper to get er dun
