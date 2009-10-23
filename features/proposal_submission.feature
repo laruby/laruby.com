@@ -8,14 +8,37 @@ Feature: Proposal submission
     When I follow "Request a Presentation"
     Then I should be on the login page
   
-  Scenario: As a logged in suer I want to see the right form
-    Given I am the registered user John Doe
-    And I am on the login page
-    When I login with valid credentials
-    And I go to the presentation index
-    And I follow "Request a Presentation"
+  @logged_in
+  Scenario: As a logged in user I want to see the right form
+    Given I am on the presentation index
+    When I follow "Request a Presentation"
     Then I should be on the new presentation page
+
+  @create_presentation_valid_data
+  Scenario: As a logged in user I want to be able to submit a valid presentation
+    Given I am on the new presentation page
+    When I fill in the following:
+        |Subject|Cucumber tests|
+        |Difficulty level|Beginner|
+        |Duration|30|
+        |Description|Some cool stuff|
+      And I press "Request"
+    Then I should be on the presentations index page
+      And I should see "successfully created"
+      And I should see "Cucumber tests"
+      And I should see "Some cool stuff"
   
+  @create_presentation_invalid_data
+  Scenario: As a logged in user I should not be able to create a presentation with invalid data
+    Given I am on the new presentation page
+    When I fill in the following:
+        |Subject||
+        |Difficulty level|Beginner|
+        |Duration|30|
+        |Description|Some cool stuff|
+      And I press "Request"
+    Then I should be on the new presentation page
+      And I should see "Subject cannot be blank"
   
   
   

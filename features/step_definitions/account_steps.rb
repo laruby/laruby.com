@@ -13,3 +13,10 @@ When /^I login with valid credentials$/ do
   fill_in('password', :with => 'password')
   click_button('Login')
 end
+
+Before('@logged_in', '@create_presentation_valid_data', '@create_presentation_invalid_data') do
+  Given "I am the registered user John Doe"
+  And "I am on the login page"
+  And "I login with valid credentials"
+end
+
