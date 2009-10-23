@@ -13,7 +13,7 @@ describe Presentation do
   
   it "should require a subject" do
 	  @presentation = Presentation.new(@valid_attributes.except(:subject))
-		@presentation.should have(1).errors_on(:subject)
+		@presentation.should have(2).errors_on(:subject)
 	end
 	
 	describe "named scopes" do
