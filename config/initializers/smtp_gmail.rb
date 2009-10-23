@@ -1,9 +1,3 @@
-### This file is automatically copied into RAILS_ROOT/initializers/.
-
-ActionMailer::Base.delivery_method        = :smtp
-ActionMailer::Base.perform_deliveries     = true
-ActionMailer::Base.raise_delivery_errors  = true
-
 begin
   LARUBY_EMAIL = Configuration.find_by_name("mail_user_name").value
   config_options = {
