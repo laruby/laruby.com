@@ -3,6 +3,7 @@ class Presentation < ActiveRecord::Base
   has_many :links, :class_name => 'PresentationLink' 
   
   validates_presence_of :subject, :on => :create, :message => "can't be blank"
+  validates_length_of :subject, :in => 6..60
   
   named_scope :proposed, :conditions => {:presentation_date => nil}
   named_scope :upcoming, :conditions => ['presentation_date >= ?', Date.today]

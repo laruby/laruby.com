@@ -23,7 +23,7 @@ Feature: Proposal submission
         |Duration|30|
         |Description|Some cool stuff|
       And I press "Request"
-    Then I should be on the presentations index page
+    Then I should be on the presentation index
       And I should see "successfully created"
       And I should see "Cucumber tests"
       And I should see "Some cool stuff"
@@ -32,13 +32,13 @@ Feature: Proposal submission
   Scenario: As a logged in user I should not be able to create a presentation with invalid data
     Given I am on the new presentation page
     When I fill in the following:
-        |Subject||
         |Difficulty level|Beginner|
         |Duration|30|
         |Description|Some cool stuff|
       And I press "Request"
-    Then I should be on the new presentation page
-      And I should see "Subject cannot be blank"
+    Then the "Duration" field should contain "30"
+      And the "Description" field should contain "Some cool stuff"
+      And I should see "Subject can't be blank"
   
   
   
