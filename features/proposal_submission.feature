@@ -14,7 +14,7 @@ Feature: Proposal submission
     When I follow "Request a Presentation"
     Then I should be on the new presentation page
 
-  @create_presentation_valid_data
+  @logged_in
   Scenario: As a logged in user I want to be able to submit a valid presentation
     Given I am on the new presentation page
     When I fill in the following:
@@ -28,7 +28,7 @@ Feature: Proposal submission
       And I should see "Cucumber tests"
       And I should see "Some cool stuff"
   
-  @create_presentation_invalid_data
+  @logged_in
   Scenario: As a logged in user I should not be able to create a presentation with invalid data
     Given I am on the new presentation page
     When I fill in the following:

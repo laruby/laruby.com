@@ -14,7 +14,7 @@ When /^I login with valid credentials$/ do
   click_button('Login')
 end
 
-Before('@logged_in', '@create_presentation_valid_data', '@create_presentation_invalid_data') do
+Before('@logged_in') do
   Given "I am the registered user John Doe"
   And "I am on the login page"
   And "I login with valid credentials"
