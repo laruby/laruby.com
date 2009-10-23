@@ -16,7 +16,7 @@ Rails::Initializer.run do |config|
 
   ##
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem "haml", :version => "2.2.3"
+  config.gem "haml", :version => "~> 2.2.3"
   config.gem "BRIMIL01-meetup_api", :lib => 'meetup_api', :source => 'http://gems.github.com/'
   config.gem "json", :version => ">=1.1.0"
   config.gem "binarylogic-authlogic", :lib => 'authlogic', :source => 'http://gems.github.com/'
