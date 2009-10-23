@@ -2,7 +2,8 @@ Given /^I am the registered user (.+)$/ do |login|
   params ={
     'email' => "#{login.gsub(' ', '_')}@example.com",
     'password' => 'password',
-    'password_confirmation' => 'password'
+    'password_confirmation' => 'password',
+    'active' => true
   }
   @user = User.create!(params)
 end

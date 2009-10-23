@@ -31,9 +31,9 @@ ActiveRecord::Schema.define(:version => 20090925041117) do
     t.integer  "submitted_by"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "presentation_date"
     t.integer  "duration"
     t.string   "difficulty_level"
+    t.date     "presentation_date"
   end
 
   create_table "resources", :force => true do |t|
