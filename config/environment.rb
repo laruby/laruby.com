@@ -29,7 +29,7 @@ Rails::Initializer.run do |config|
     config.gem "webrat", :version => "0.5.3"
     config.gem "rspec", :lib => false, :version => "1.2.8"
     config.gem "rspec-rails", :lib => false, :version => "1.2.7.1"
-    config.gem "cucumber", :version => ">=0.3.0"
+    config.gem "cucumber", :version => "~>0.4.2"
   end
 
   if RUBY_VERSION == "1.8.7"
