@@ -20,3 +20,12 @@ Before('@logged_in') do
   And "I login with valid credentials"
 end
 
+
+  Given /^there is a valid proposal$/ do
+    visit path_to(new_presentation_path)
+    fill_in('Subject', :with => "Valid Proposal")
+    fill_in('Difficulty level', :with => "Beginer")
+    fill_in('Duration', :with => "30")
+    fill_in('Description', :with => "Some cool stuff")
+    click_button('Request')
+end
