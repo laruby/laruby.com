@@ -2,12 +2,12 @@ Feature: Proposal submission
   In order to submit a proposal
   As a logged in user
   I want to provide good input
-  
+
   Scenario: When I try to submit a proposal as an anonymous user I should be direct to the login page
     Given I am on the presentation index
     When I follow "Request a Presentation"
     Then I should be on the login page
-  
+
   @logged_in
   Scenario: As a logged in user I want to see the right form
     Given I am on the presentation index
@@ -27,7 +27,7 @@ Feature: Proposal submission
       And I should see "successfully created"
       And I should see "Cucumber tests"
       And I should see "Some cool stuff"
-  
+
   @logged_in
   Scenario: As a logged in user I should not be able to create a presentation with invalid data
     Given I am on the new presentation page
@@ -38,7 +38,4 @@ Feature: Proposal submission
       And I press "Request"
     Then the "Duration" field should contain "30"
       And the "Description" field should contain "Some cool stuff"
-      And I should see "Subject can't be blank"
-  
-  
-  
+      And I should see "Subject is too short"
