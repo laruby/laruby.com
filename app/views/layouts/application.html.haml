@@ -49,7 +49,8 @@
           %h2
             = laruby
             Meetup
-          = render :partial => 'pages/events', :locals => { :events => meetup_events } 
+          - cache 'meetup' do            
+            = render :partial => 'pages/events', :locals => { :events => meetup_events }
           = yield :sidebar
       .clear
     -# too tired to figure this out right now

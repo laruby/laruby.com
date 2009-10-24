@@ -12,15 +12,19 @@ describe Presentation do
   end
 
   it "should require a subject" do
-    @presentation = Presentation.new(@valid_attributes.except(:subject))
-    @presentation.should have(1).errors_on(:subject)
-  end
-
-  describe "named scopes" do
-    before :each do
-      @proposed = Presentation.create(@valid_attributes)
-      @upcoming = Presentation.create(@valid_attributes.merge(:presentation_date => Date.tomorrow))
-      @past = Presentation.create(@valid_attributes.merge(:presentation_date => Date.yesterday))
+	  @presentation = Presentation.new(@valid_attributes.except(:subject))
+		@presentation.should have(1).errors_on(:subject)
+	end
+	
+	describe "named scopes" do	
+	  before :each do
+	    @proposed = Presentation.create(@valid_attributes)
+	    @upcoming = Presentation.create(@valid_attributes.merge(:presentation_date => Date.tomorrow))
+	    @past = Presentation.create(@valid_attributes.merge(:presentation_date => Date.yesterday))
+    end
+	
+  	it "should find proposed presentations" do
+  	  Presentation.proposed.should == [@proposed]
     end
 
     it "should find proposed presentations" do
