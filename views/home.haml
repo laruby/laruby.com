@@ -46,5 +46,9 @@
     #LARubyfeed
   %section.last
     %header LARuby meetup
+    - @meetups.each do |meetup|
+      = meetup.name
+      = meetup.time
+      = meetup.event_url
 -# %footer
 -#   footer

@@ -17,6 +17,7 @@ set :haml, {:format => :html5 } # Get with the program. Start using HTML5. Comme
 
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
+  RMeetup::Client.api_key = "422f436d58563429753272236322037"
 end
 
 get '/stylesheets/:name.css' do
@@ -25,11 +26,11 @@ get '/stylesheets/:name.css' do
 end
 
 get '/' do
+  @meetups = RMeetup::Client.fetch(:events,{:group_urlname => "laruby"})
   haml :home
 end
 
-# RMeetup::Client.api_key = "422f436d58563429753272236322037"
-# results = RMeetup::Client.fetch(:events,{:zip => "90210"})
+# # results = RMeetup::Client.fetch(:events,{:zip => "90210"})
 # results.each do |result|
 #   result.show
 # end
