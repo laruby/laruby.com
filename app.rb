@@ -4,7 +4,7 @@ require 'rMeetup'
 # require 'compass-susy-plugin'
 
 require 'sinatra'
-# require 'lib/render_partial'
+# require 'render_partial'
 
 require 'haml' # must be loaded after sinatra
 
@@ -27,10 +27,9 @@ end
 
 get '/' do
   @meetups = RMeetup::Client.fetch(:events,{:group_urlname => "laruby"})
-  haml :home
+  haml :home, :layout => :'layouts/application'
 end
 
-# # results = RMeetup::Client.fetch(:events,{:zip => "90210"})
-# results.each do |result|
-#   result.show
-# end
+get '/about' do
+  haml :about, :layout => :'layouts/application'
+end
