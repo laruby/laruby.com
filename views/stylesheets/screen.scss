@@ -1,0 +1,147 @@
+// Imports -------------------------------------------------------------------
+
+@import "compass";
+@import "base";
+@import "blueprint";
+@import "compass/reset";
+
+/* Layout ------------------------------------------------------------------*/
+
+.container {
+  @include container;
+  // @include susy-grid-background;
+  font-family: helvetica;
+//   clear: both;
+//   position: relative;
+// top: -104px;
+}
+
+@font-face {
+  font-family: "leaguegothic";
+  src: url('/font/League_Gothic.otf');
+}
+
+a {
+  color: #dc244e;
+  text-decoration: none;
+}
+
+header.banner {
+  background: url('/images/larubybannerstrips.png');
+  height: 136px;
+  div.icon-labuildings {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    width: 346px;
+    height: 121px;
+    float: left;
+    left: 161px;
+    position: relative;
+    top: 16px;
+  }
+  div.icon-larubyribbon {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    width: 312px;
+    height: 48px;
+    position: relative;
+    z-index: 2;
+    span {
+      font-family: 'leaguegothic', helvetica;
+      color: white;
+      font-size: 24px;
+      position: absolute;
+      top: 5px;
+      left: 42px;
+      text-shadow: 1px 1px 1px black;
+      z-index: 3;
+      &.about {
+        left: 228px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+  div.icon-larubylogo {
+    margin: 0 auto;
+    display: block;
+    clear: both;
+    width: 203px;
+    height: 169px;
+    position: relative;
+    top: -102px;
+  }
+  div.icon-hollywood {
+    width: 346px;
+    height: 71px;
+    float: left;
+    position: relative;
+    top: -102px;
+    left: 702px;
+    z-index: 1;
+  }
+}
+
+section {
+  @include columns(3);
+  // padding-left: 20px;
+  &.center {
+    @include columns(6);
+    background: #ECE6E6;
+    padding-right: 33px;
+    margin-right: 0;
+    min-height: 600px;
+    header {
+      margin-left: 10px;
+    }
+  }
+  &.last {
+    header {
+      margin-left: 10px;
+    }
+  }
+  header {
+    color: #005db8;
+    font-size: 18px;
+    font-family: helvetica;
+    margin-top: 70px;
+  }
+  .info {
+    line-height: 17px;
+    margin-top: 35px;
+    .bold {
+      font-weight: 700;
+    }
+  }
+}
+
+#LARubyfeed {
+  li {
+    float: left;
+    margin-top: 40px;
+    a.tweet_avatar {
+      float: left;
+      padding: 0 20px 0 20px;
+    }
+  }
+  span.tweet_text {
+    margin-top: 20px;
+  }
+  span.tweet_time {
+    font-size: 14px;
+    clear: both;
+    float: left;
+    padding-left: 90px;
+    a {
+      color: #005db8;
+    }
+  }
+}
+
+// footer {
+//   @include full;
+//   @include pad(3,3);
+// }

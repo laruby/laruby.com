@@ -1,0 +1,14 @@
+// Imports -------------------------------------------------------------------
+@import "susy";
+
+// Grid ----------------------------------------------------------------------
+
+$total-cols             : 12;
+$col-width              : 60px;
+$gutter-width           : 20px;
+$side-gutter-width      : $gutter-width;
+
+$show-grid-backgrounds  : true;
+
+@import "icon/*.png"; //*/
+@include all-icon-sprites;

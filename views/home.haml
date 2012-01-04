@@ -1,0 +1,50 @@
+!!!
+%head
+  %title= @title || "LARuby.com"
+  %link{:href => "/stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+  /[if IE]
+    <link href="/rtylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+  %script{:language => "javascript", :src => "/javascripts/jquery.tweet.js", :type => "text/javascript"}
+  %script{:type => "text/javascript", :src => "javascripts/application.js"}
+
+%header.banner
+  .icon-labuildings
+  .icon-larubyribbon
+    %span
+      %a{:href => 'http://www.laruby.com'}HOME
+    .icon-larubylogo
+    %span.about
+      %a{:href => 'http://www.laruby.com/about'}ABOUT
+  .icon-hollywood
+%div.contents.container
+  %section
+    %header LARuby on the web
+    .info
+      %ul
+        %li
+          %a{:href => 'meetup.com/laruby'}
+            Meetup.com
+        %li
+          Follow
+          %a{:href => 'twitter.com/laruby'} laruby
+          on twitter
+        %li
+          %a{:href => 'http://www.linkedin.com/groups/LARuby-1089287?gid=1089287'} LinkedIn group
+        %li
+          Code Jam
+          %a{:href => 'http://groups.google.com/group/laruby-codejam'} LARuby
+        %li
+          IRC:
+          %span.bold #laruby
+          channel on Freenode
+        %li
+          %a{:href => 'github.com/laruby'}LARuby
+          on Github
+  %section.center
+    %header #LARuby on Twitter
+    #LARubyfeed
+  %section.last
+    %header LARuby meetup
+-# %footer
+-#   footer

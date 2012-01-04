@@ -1,0 +1,210 @@
+.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubylogo, .icon-larubyribbon {
+  background: url('../images/icon-sebcb1d4fcf.png') no-repeat;
+}
+
+.icon-hollywood {
+  background-position: 0 0;
+}
+
+.icon-labuildings {
+  background-position: 0 -71px;
+}
+
+.icon-larubylogo {
+  background-position: 0 -192px;
+}
+
+.icon-larubyribbon {
+  background-position: 0 -361px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Layout ------------------------------------------------------------------*/
+.container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  font-family: helvetica;
+}
+
+@font-face {
+  font-family: "leaguegothic";
+  src: url("/font/League_Gothic.otf");
+}
+
+a {
+  color: #dc244e;
+  text-decoration: none;
+}
+
+header.banner {
+  background: url("/images/larubybannerstrips.png");
+  height: 136px;
+}
+header.banner div.icon-labuildings {
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 346px;
+  height: 121px;
+  float: left;
+  left: 161px;
+  position: relative;
+  top: 16px;
+}
+header.banner div.icon-larubyribbon {
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 312px;
+  height: 48px;
+  position: relative;
+  z-index: 2;
+}
+header.banner div.icon-larubyribbon span {
+  font-family: 'leaguegothic', helvetica;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 5px;
+  left: 42px;
+  text-shadow: 1px 1px 1px black;
+  z-index: 3;
+}
+header.banner div.icon-larubyribbon span.about {
+  left: 228px;
+}
+header.banner div.icon-larubyribbon span a {
+  color: white;
+}
+header.banner div.icon-larubylogo {
+  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 203px;
+  height: 169px;
+  position: relative;
+  top: -102px;
+}
+header.banner div.icon-hollywood {
+  width: 346px;
+  height: 71px;
+  float: left;
+  position: relative;
+  top: -102px;
+  left: 702px;
+  z-index: 1;
+}
+
+section {
+  display: inline;
+  float: left;
+  width: 22.449%;
+  margin-right: 2.041%;
+}
+section.center {
+  display: inline;
+  float: left;
+  width: 46.939%;
+  margin-right: 2.041%;
+  background: #ECE6E6;
+  padding-right: 33px;
+  margin-right: 0;
+  min-height: 600px;
+}
+section.center header {
+  margin-left: 10px;
+}
+section.last header {
+  margin-left: 10px;
+}
+section header {
+  color: #005db8;
+  font-size: 18px;
+  font-family: helvetica;
+  margin-top: 70px;
+}
+section .info {
+  line-height: 17px;
+  margin-top: 35px;
+}
+section .info .bold {
+  font-weight: 700;
+}
+
+#LARubyfeed li {
+  float: left;
+  margin-top: 40px;
+}
+#LARubyfeed li a.tweet_avatar {
+  float: left;
+  padding: 0 20px 0 20px;
+}
+#LARubyfeed span.tweet_text {
+  margin-top: 20px;
+}
+#LARubyfeed span.tweet_time {
+  font-size: 14px;
+  clear: both;
+  float: left;
+  padding-left: 90px;
+}
+#LARubyfeed span.tweet_time a {
+  color: #005db8;
+}
