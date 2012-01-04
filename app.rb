@@ -4,7 +4,7 @@ require 'rMeetup'
 # require 'compass-susy-plugin'
 
 require 'sinatra'
-# require 'lib/render_partial'
+# require 'render_partial'
 
 require 'haml' # must be loaded after sinatra
 
@@ -25,7 +25,11 @@ get '/stylesheets/:name.css' do
 end
 
 get '/' do
-  haml :home
+  haml :home, :layout => :'layouts/application'
+end
+
+get '/about' do
+  haml :about, :layout => :'layouts/application'
 end
 
 # RMeetup::Client.api_key = "422f436d58563429753272236322037"
