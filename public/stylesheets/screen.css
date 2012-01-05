@@ -106,7 +106,7 @@ header.banner div.icon-labuildings {
   display: block;
   float: left;
   height: 121px;
-  left: 4px;
+  left: 100px;
   margin: 0 auto;
   position: relative;
   top: 16px;
@@ -149,6 +149,7 @@ header.banner div.icon-larubylogo {
 header.banner div.icon-hollywood {
   float: right;
   height: 71px;
+  right: 118px;
   position: relative;
   top: -103px;
   width: 346px;
@@ -166,17 +167,54 @@ section.center {
   float: left;
   width: 46.939%;
   margin-right: 2.041%;
-  background: #ECE6E6;
+  background: #ece6e6;
   padding-right: 33px;
   margin-right: 0;
-  min-height: 600px;
+  min-height: 1080px;
+}
+section.center .tagline {
+  background: #f7f4f4;
+  color: #dc244e;
+  font-family: 'leaguegothic', helvetica;
+  font-size: 30px;
+  margin-left: 1px;
+  text-align: center;
+  line-height: 157px;
+  height: 120px;
+  width: 476px;
+}
+section.center .showmore {
+  color: #dc244e;
+  clear: both;
+  font-family: 'leaguegothic', helvetica;
+  font-size: 25px;
+  text-align: center;
+  top: 30px;
+  position: relative;
+  display: block;
+}
+section.center .about {
+  background: #f7f4f4;
+  margin-left: 1px;
+  top: -30px;
+  position: relative;
+  height: 245px;
+  width: 476px;
+}
+section.center .about header {
+  padding-top: 70px;
 }
 section.center header {
   margin-left: 10px;
+  margin-top: 30px;
 }
 section.center article {
   padding: 20px;
   line-height: 20px;
+}
+section.center article span {
+  padding: 10px 0;
+  float: left;
 }
 section.last {
   line-height: 18px;
@@ -199,7 +237,7 @@ section header {
   color: #005db8;
   font-size: 18px;
   font-family: helvetica;
-  margin-top: 70px;
+  margin-top: 150px;
 }
 section .info {
   line-height: 17px;
@@ -209,26 +247,21 @@ section .info .bold {
   font-weight: 700;
 }
 section .info ul {
-  margin-top: 20px;
-  margin-left: 20px;
+  margin: 10px 0 0 10px;
 }
 
 #LARubyfeed li {
   float: left;
   margin-top: 40px;
+  line-height: 17px;
 }
 #LARubyfeed li a.tweet_avatar {
   float: left;
   padding: 0 20px 0 20px;
 }
-#LARubyfeed span.tweet_text {
-  margin-top: 20px;
-}
-#LARubyfeed span.tweet_time {
-  clear: both;
-  font-size: 14px;
-  float: left;
-  padding-left: 90px;
+#LARubyfeed li .tweet_time {
+  font-size: 11px;
+  font-style: oblique;
 }
 #LARubyfeed span.tweet_time a {
   color: #005db8;

@@ -13,14 +13,20 @@
         %li
           CPO Commerce
   %section.center
-    %header Presentations
-    %article
-      Presentations have covered Ruby and associated development tools. Our members are web developers, system administrators, QA engineers, and others. Our Rubyists are hobbyists and professionals, experts and neophytes.
+    .about
+      %header Presentations
+      %article
+        Presentations have covered Ruby and associated development tools. Our members are web developers, system administrators, QA engineers, and others. Our Rubyists are hobbyists and professionals, experts and neophytes.
     %header About laruby.com
     %article
-      laruby.com is a collaborative effort of LA Ruby.
-      See the meetup page for more information: LA Ruby Meetup
-      Source code available on github: Source Code 
+      %span
+        laruby.com is a collaborative effort of LA Ruby.
+      %span
+        See the meetup page for more information:
+        %a{:href => 'http://www.meetup.com/laruby/'}LA Ruby Meetup
+      %span
+        Source code available on github:
+        %a{:href => 'https://github.com/laruby/laruby.com'}Source Code
   %section.last
     %header LARuby meetup
     - @meetups.each do |meetup|

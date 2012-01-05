@@ -27,6 +27,7 @@ a {
 }
 
 $pinkish : #dc244e;
+
 header.banner {
   background: url('/images/larubybannerstrips.png');
   height: 134px;
@@ -35,7 +36,7 @@ header.banner {
     display: block;
     float: left;
     height: 121px;
-    left: 4px;
+    left: 100px;
     margin: 0 auto;
     position: relative;
     top: 16px;
@@ -78,6 +79,7 @@ header.banner {
   div.icon-hollywood {
     float: right;
     height: 71px;
+    right: 118px;
     position: relative;
     top: -103px;
     width: 346px;
@@ -85,21 +87,61 @@ header.banner {
   }
 }
 
+$centercolor: #ECE6E6;
+$lightercenter: lighten($centercolor, 5%);
 section {
   @include columns(3);
   // padding-left: 20px;
   &.center {
     @include columns(6);
-    background: #ECE6E6;
+    background: $centercolor;
     padding-right: 33px;
     margin-right: 0;
-    min-height: 600px;
+    min-height: 1080px;
+    .tagline {
+      background: $lightercenter;
+      color: $pinkish;
+      font-family: 'leaguegothic', helvetica;
+      font-size: 30px;
+      margin-left: 1px;
+      text-align: center;
+      line-height: 157px;
+      height: 120px;
+      width: 476px;
+    }
+    .showmore {
+      color: $pinkish;
+      clear: both;
+      font-family: 'leaguegothic', helvetica;
+      font-size: 25px;
+      text-align: center;
+      top: 30px;
+      position: relative;
+      display: block;
+    }
+    .about {
+      background: $lightercenter;
+      margin-left: 1px;
+      top: -30px;
+      position: relative;
+      height: 245px;
+      width: 476px;
+      header {
+        padding-top: 70px;
+      }
+    }
+
     header {
       margin-left: 10px;
+      margin-top: 30px;
     }
     article {
       padding: 20px;
       line-height: 20px;
+      span {
+        padding: 10px 0;
+        float: left;
+      }
     }
   }
   &.last {
@@ -123,7 +165,7 @@ section {
     color: #005db8;
     font-size: 18px;
     font-family: helvetica;
-    margin-top: 70px;
+    margin-top: 150px;
   }
   .info {
     line-height: 17px;
@@ -132,8 +174,7 @@ section {
       font-weight: 700;
     }
     ul {
-      margin-top: 20px;
-      margin-left: 20px;
+      margin: 10px 0 0 10px;
     }
   }
 }
@@ -142,19 +183,17 @@ section {
   li {
     float: left;
     margin-top: 40px;
+    line-height: 17px;
     a.tweet_avatar {
       float: left;
       padding: 0 20px 0 20px;
     }
-  }
-  span.tweet_text {
-    margin-top: 20px;
+    .tweet_time {
+      font-size: 11px;
+      font-style: oblique;
+    }
   }
   span.tweet_time {
-    clear: both;
-    font-size: 14px;
-    float: left;
-    padding-left: 90px;
     a {
       color: #005db8;
     }
