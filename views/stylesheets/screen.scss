@@ -26,36 +26,37 @@ a {
   text-decoration: none;
 }
 
+$pinkish : #dc244e;
 header.banner {
   background: url('/images/larubybannerstrips.png');
-  height: 136px;
+  height: 134px;
   div.icon-labuildings {
-    margin: 0 auto;
-    display: block;
     clear: both;
-    width: 346px;
-    height: 121px;
+    display: block;
     float: left;
-    left: 161px;
+    height: 121px;
+    left: 4px;
+    margin: 0 auto;
     position: relative;
     top: 16px;
+    width: 346px;
   }
   div.icon-larubyribbon {
-    margin: 0 auto;
-    display: block;
     clear: both;
-    width: 312px;
+    display: block;
     height: 48px;
+    margin: 0 auto;
     position: relative;
+    width: 312px;
     z-index: 2;
     span {
-      font-family: 'leaguegothic', helvetica;
       color: white;
+      font-family: 'leaguegothic', helvetica;
       font-size: 24px;
-      position: absolute;
-      top: 5px;
       left: 42px;
+      position: absolute;
       text-shadow: 1px 1px 1px black;
+      top: 5px;
       z-index: 3;
       &.about {
         left: 228px;
@@ -66,21 +67,20 @@ header.banner {
     }
   }
   div.icon-larubylogo {
-    margin: 0 auto;
-    display: block;
     clear: both;
-    width: 203px;
+    display: block;
     height: 169px;
+    margin: 0 auto;
     position: relative;
     top: -102px;
+    width: 203px;
   }
   div.icon-hollywood {
-    width: 346px;
+    float: right;
     height: 71px;
-    float: left;
     position: relative;
-    top: -102px;
-    left: 702px;
+    top: -103px;
+    width: 346px;
     z-index: 1;
   }
 }
@@ -97,10 +97,26 @@ section {
     header {
       margin-left: 10px;
     }
+    article {
+      padding: 20px;
+      line-height: 20px;
+    }
   }
   &.last {
+    line-height: 18px;
     header {
       margin-left: 10px;
+    }
+    div {
+      margin-left: 10px;
+      &.name {
+        color: $pinkish;
+        font-weight: 700;
+        margin-top: 36px;
+      }
+      &.time {
+        font-size:12px;
+      }
     }
   }
   header {
@@ -114,6 +130,10 @@ section {
     margin-top: 35px;
     .bold {
       font-weight: 700;
+    }
+    ul {
+      margin-top: 20px;
+      margin-left: 20px;
     }
   }
 }
@@ -131,8 +151,8 @@ section {
     margin-top: 20px;
   }
   span.tweet_time {
-    font-size: 14px;
     clear: both;
+    font-size: 14px;
     float: left;
     padding-left: 90px;
     a {

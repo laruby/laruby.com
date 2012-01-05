@@ -4,11 +4,11 @@
     .info
       %ul
         %li
-          %a{:href => 'meetup.com/laruby'}
+          %a{:href => 'http://meetup.com/laruby'}
             Meetup.com
         %li
           Follow
-          %a{:href => 'twitter.com/laruby'} laruby
+          %a{:href => 'http://twitter.com/laruby'} laruby
           on twitter
         %li
           %a{:href => 'http://www.linkedin.com/groups/LARuby-1089287?gid=1089287'} LinkedIn group
@@ -20,7 +20,7 @@
           %span.bold #laruby
           channel on Freenode
         %li
-          %a{:href => 'github.com/laruby'}LARuby
+          %a{:href => 'http://github.com/laruby'}LARuby
           on Github
   %section.center
     %header #LARuby on Twitter
@@ -28,8 +28,12 @@
   %section.last
     %header LARuby meetup
     - @meetups.each do |meetup|
-      = meetup.name
-      = meetup.time
-      = meetup.event_url
+      .name
+        = meetup.name
+      .time
+        = meetup.time.to_s.split('T').join(' ')
+      .url
+        %a{:href => "#{meetup.event_url}"}
+          RSVP
 -# %footer
 -#   footer

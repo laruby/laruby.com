@@ -31,5 +31,6 @@ get '/' do
 end
 
 get '/about' do
+  @meetups = RMeetup::Client.fetch(:events,{:group_urlname => "laruby"})
   haml :about, :layout => :'layouts/application'
 end

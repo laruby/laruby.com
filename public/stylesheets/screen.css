@@ -1,5 +1,5 @@
-.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubylogo, .icon-larubyribbon {
-  background: url('../images/icon-sebcb1d4fcf.png') no-repeat;
+.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubybannerstrips, .icon-larubylogo, .icon-larubyribbon {
+  background: url('../images/icon-s55c2187c4e.png') no-repeat;
 }
 
 .icon-hollywood {
@@ -10,12 +10,16 @@
   background-position: 0 -71px;
 }
 
-.icon-larubylogo {
+.icon-larubybannerstrips {
   background-position: 0 -192px;
 }
 
+.icon-larubylogo {
+  background-position: 0 -328px;
+}
+
 .icon-larubyribbon {
-  background-position: 0 -361px;
+  background-position: 0 -497px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -95,36 +99,36 @@ a {
 
 header.banner {
   background: url("/images/larubybannerstrips.png");
-  height: 136px;
+  height: 134px;
 }
 header.banner div.icon-labuildings {
-  margin: 0 auto;
-  display: block;
   clear: both;
-  width: 346px;
-  height: 121px;
+  display: block;
   float: left;
-  left: 161px;
+  height: 121px;
+  left: 4px;
+  margin: 0 auto;
   position: relative;
   top: 16px;
+  width: 346px;
 }
 header.banner div.icon-larubyribbon {
-  margin: 0 auto;
-  display: block;
   clear: both;
-  width: 312px;
+  display: block;
   height: 48px;
+  margin: 0 auto;
   position: relative;
+  width: 312px;
   z-index: 2;
 }
 header.banner div.icon-larubyribbon span {
-  font-family: 'leaguegothic', helvetica;
   color: white;
+  font-family: 'leaguegothic', helvetica;
   font-size: 24px;
-  position: absolute;
-  top: 5px;
   left: 42px;
+  position: absolute;
   text-shadow: 1px 1px 1px black;
+  top: 5px;
   z-index: 3;
 }
 header.banner div.icon-larubyribbon span.about {
@@ -134,21 +138,20 @@ header.banner div.icon-larubyribbon span a {
   color: white;
 }
 header.banner div.icon-larubylogo {
-  margin: 0 auto;
-  display: block;
   clear: both;
-  width: 203px;
+  display: block;
   height: 169px;
+  margin: 0 auto;
   position: relative;
   top: -102px;
+  width: 203px;
 }
 header.banner div.icon-hollywood {
-  width: 346px;
+  float: right;
   height: 71px;
-  float: left;
   position: relative;
-  top: -102px;
-  left: 702px;
+  top: -103px;
+  width: 346px;
   z-index: 1;
 }
 
@@ -171,8 +174,26 @@ section.center {
 section.center header {
   margin-left: 10px;
 }
+section.center article {
+  padding: 20px;
+  line-height: 20px;
+}
+section.last {
+  line-height: 18px;
+}
 section.last header {
   margin-left: 10px;
+}
+section.last div {
+  margin-left: 10px;
+}
+section.last div.name {
+  color: #dc244e;
+  font-weight: 700;
+  margin-top: 36px;
+}
+section.last div.time {
+  font-size: 12px;
 }
 section header {
   color: #005db8;
@@ -187,6 +208,10 @@ section .info {
 section .info .bold {
   font-weight: 700;
 }
+section .info ul {
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
 #LARubyfeed li {
   float: left;
@@ -200,8 +225,8 @@ section .info .bold {
   margin-top: 20px;
 }
 #LARubyfeed span.tweet_time {
-  font-size: 14px;
   clear: both;
+  font-size: 14px;
   float: left;
   padding-left: 90px;
 }
