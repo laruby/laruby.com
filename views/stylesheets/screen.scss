@@ -123,6 +123,17 @@ section {
         float: left;
       }
     }
+    footer {
+      clear: both;
+      display: block;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      padding: 60px 0;
+      text-align: center;
+      text-shadow: 1px 1px 1px white;
+      width: 478px;
+    }
   }
   &.last {
     line-height: 18px;
@@ -189,7 +200,3 @@ section {
   }
 }
 
-// footer {
-//   @include full;
-//   @include pad(3,3);
-// }
