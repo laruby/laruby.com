@@ -91,13 +91,10 @@ section {
     .showmore {
       @include text-shadow(1px 1px 1px white);
       color: $pinkish;
-      clear: both;
       font-family: 'leaguegothic', helvetica;
       font-size: 25px;
       text-align: center;
-      top: 30px;
-      position: relative;
-      display: block;
+      padding-top: 30px;
     }
     .about {
       background: $lightercenter;
@@ -126,10 +123,7 @@ section {
     footer {
       @include text-shadow(1px 1px 1px white);
       clear: both;
-      display: block;
-      float: left;
       font-size: 12px;
-      position: relative;
       padding: 80px 0 30px;
       text-align: center;
       width: 478px;
@@ -161,7 +155,7 @@ section {
     margin-top: 150px;
   }
   .info {
-    line-height: 17px;
+    line-height: 20px;
     margin-top: 35px;
     .bold {
       font-weight: 700;
@@ -173,6 +167,7 @@ section {
 }
 
 #LARubyfeed {
+  @include pie-clearfix;
   li {
     float: left;
     line-height: 17px;
