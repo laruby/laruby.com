@@ -1,11 +1,7 @@
 require 'rubygems'
 require 'compass' # must be loaded before sinatra
-require 'rMeetup'
-# require 'compass-susy-plugin'
-
+require 'rmeetup'
 require 'sinatra'
-# require 'render_partial'
-
 require 'haml' # must be loaded after sinatra
 
 # Set Sinatra's variables
