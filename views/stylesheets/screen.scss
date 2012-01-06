@@ -31,36 +31,24 @@ $pinkish : #dc244e;
 header.banner {
   background: url('/images/larubybannerstrips.png');
   height: 134px;
-  div.icon-labuildings {
+  div.icon-topbanner {
     clear: both;
     display: block;
-    float: left;
-    height: 121px;
-    left: 100px;
     margin: 0 auto;
     position: relative;
-    top: 16px;
-    width: 346px;
-  }
-  div.icon-larubyribbon {
-    clear: both;
-    display: block;
-    height: 48px;
-    margin: 0 auto;
-    position: relative;
-    width: 312px;
-    z-index: 2;
+    width: 1009px;
+    z-index: 224;
     span {
       color: white;
       font-family: 'leaguegothic', helvetica;
       font-size: 24px;
-      left: 42px;
+      left: 391px;
       position: absolute;
       text-shadow: 1px 1px 1px black;
-      top: 5px;
-      z-index: 3;
+      top: 114px;
+      z-index: 99;
       &.about {
-        left: 228px;
+        left: 574px;
       }
       a {
         color: white;
@@ -73,17 +61,8 @@ header.banner {
     height: 169px;
     margin: 0 auto;
     position: relative;
-    top: -102px;
+    top: 12px;
     width: 203px;
-  }
-  div.icon-hollywood {
-    float: right;
-    height: 71px;
-    right: 118px;
-    position: relative;
-    top: -103px;
-    width: 346px;
-    z-index: 1;
   }
 }
 
@@ -99,6 +78,7 @@ section {
     margin-right: 0;
     min-height: 1080px;
     .tagline {
+      @include text-shadow(1px 1px 1px white);
       background: $lightercenter;
       color: $pinkish;
       font-family: 'leaguegothic', helvetica;
@@ -110,6 +90,7 @@ section {
       width: 476px;
     }
     .showmore {
+      @include text-shadow(1px 1px 1px white);
       color: $pinkish;
       clear: both;
       font-family: 'leaguegothic', helvetica;
@@ -162,9 +143,11 @@ section {
     }
   }
   header {
+    @include text-shadow(1px 1px 1px white);
     color: #005db8;
-    font-size: 18px;
+    font-size: 20px;
     font-family: helvetica;
+    font-weight: 600;
     margin-top: 150px;
   }
   .info {
@@ -182,15 +165,22 @@ section {
 #LARubyfeed {
   li {
     float: left;
-    margin-top: 40px;
     line-height: 17px;
+    margin-top: 10px;
     a.tweet_avatar {
       float: left;
-      padding: 0 20px 0 20px;
+      padding: 10px 20px 20px;
+      img {
+        @include border-radius(5);
+      }
     }
     .tweet_time {
       font-size: 11px;
       font-style: oblique;
+    }
+    .tweet_text {
+      float: left;
+      width: 350px;
     }
   }
   span.tweet_time {

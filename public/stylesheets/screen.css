@@ -1,5 +1,5 @@
-.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubybannerstrips, .icon-larubylogo, .icon-larubyribbon {
-  background: url('../images/icon-s55c2187c4e.png') no-repeat;
+.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubybannerstrips, .icon-larubylogo, .icon-larubyribbon, .icon-topbanner {
+  background: url('../images/icon-s831255a666.png') no-repeat;
 }
 
 .icon-hollywood {
@@ -20,6 +20,10 @@
 
 .icon-larubyribbon {
   background-position: 0 -497px;
+}
+
+.icon-topbanner {
+  background-position: 0 -545px;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -101,40 +105,28 @@ header.banner {
   background: url("/images/larubybannerstrips.png");
   height: 134px;
 }
-header.banner div.icon-labuildings {
+header.banner div.icon-topbanner {
   clear: both;
   display: block;
-  float: left;
-  height: 121px;
-  left: 100px;
   margin: 0 auto;
   position: relative;
-  top: 16px;
-  width: 346px;
+  width: 1009px;
+  z-index: 224;
 }
-header.banner div.icon-larubyribbon {
-  clear: both;
-  display: block;
-  height: 48px;
-  margin: 0 auto;
-  position: relative;
-  width: 312px;
-  z-index: 2;
-}
-header.banner div.icon-larubyribbon span {
+header.banner div.icon-topbanner span {
   color: white;
   font-family: 'leaguegothic', helvetica;
   font-size: 24px;
-  left: 42px;
+  left: 391px;
   position: absolute;
   text-shadow: 1px 1px 1px black;
-  top: 5px;
-  z-index: 3;
+  top: 114px;
+  z-index: 99;
 }
-header.banner div.icon-larubyribbon span.about {
-  left: 228px;
+header.banner div.icon-topbanner span.about {
+  left: 574px;
 }
-header.banner div.icon-larubyribbon span a {
+header.banner div.icon-topbanner span a {
   color: white;
 }
 header.banner div.icon-larubylogo {
@@ -143,17 +135,8 @@ header.banner div.icon-larubylogo {
   height: 169px;
   margin: 0 auto;
   position: relative;
-  top: -102px;
+  top: 12px;
   width: 203px;
-}
-header.banner div.icon-hollywood {
-  float: right;
-  height: 71px;
-  right: 118px;
-  position: relative;
-  top: -103px;
-  width: 346px;
-  z-index: 1;
 }
 
 section {
@@ -173,6 +156,7 @@ section.center {
   min-height: 1080px;
 }
 section.center .tagline {
+  text-shadow: 1px 1px 1px white;
   background: #f7f4f4;
   color: #dc244e;
   font-family: 'leaguegothic', helvetica;
@@ -184,6 +168,7 @@ section.center .tagline {
   width: 476px;
 }
 section.center .showmore {
+  text-shadow: 1px 1px 1px white;
   color: #dc244e;
   clear: both;
   font-family: 'leaguegothic', helvetica;
@@ -234,9 +219,11 @@ section.last div.time {
   font-size: 12px;
 }
 section header {
+  text-shadow: 1px 1px 1px white;
   color: #005db8;
-  font-size: 18px;
+  font-size: 20px;
   font-family: helvetica;
+  font-weight: 600;
   margin-top: 150px;
 }
 section .info {
@@ -252,16 +239,28 @@ section .info ul {
 
 #LARubyfeed li {
   float: left;
-  margin-top: 40px;
   line-height: 17px;
+  margin-top: 10px;
 }
 #LARubyfeed li a.tweet_avatar {
   float: left;
-  padding: 0 20px 0 20px;
+  padding: 10px 20px 20px;
+}
+#LARubyfeed li a.tweet_avatar img {
+  -moz-border-radius: 5;
+  -webkit-border-radius: 5;
+  -o-border-radius: 5;
+  -ms-border-radius: 5;
+  -khtml-border-radius: 5;
+  border-radius: 5;
 }
 #LARubyfeed li .tweet_time {
   font-size: 11px;
   font-style: oblique;
+}
+#LARubyfeed li .tweet_text {
+  float: left;
+  width: 350px;
 }
 #LARubyfeed span.tweet_time a {
   color: #005db8;
