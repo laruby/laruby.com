@@ -1,5 +1,5 @@
 .icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubybannerstrips, .icon-larubylogo, .icon-larubyribbon, .icon-topbanner {
-  background: url('../images/icon-s831255a666.png') no-repeat;
+  background: url('../images/icon-s3cd263fe19.png') no-repeat;
 }
 
 .icon-hollywood {
@@ -116,14 +116,14 @@ header.banner div.icon-topbanner span {
   color: white;
   font-family: 'leaguegothic', helvetica;
   font-size: 24px;
-  left: 391px;
+  left: 397px;
   position: absolute;
   text-shadow: 1px 1px 1px black;
   top: 114px;
   z-index: 99;
 }
 header.banner div.icon-topbanner span.about {
-  left: 574px;
+  left: 580px;
 }
 header.banner div.icon-topbanner span a {
   color: white;
