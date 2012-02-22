@@ -5,7 +5,7 @@ $(document).ready(function() {
         avatar_size: 50,
         count: 10,
         loading_text: "searching twitter...",
-        query: "laruby",
+        query: "#laruby OR @laruby",
         refresh_interval: 1000
       });
     });
