@@ -9,11 +9,7 @@
 
 .container {
   @include container;
-  // @include susy-grid-background;
   font-family: helvetica;
-//   clear: both;
-//   position: relative;
-// top: -104px;
 }
 
 @font-face {
@@ -29,10 +25,12 @@ a {
 $pinkish : #dc244e;
 
 header.banner {
+  background: url("/images/larubybannerstrips.png") repeat-x;
   height: 134px;
   div.icon-topbanner {
     clear: both;
     display: block;
+    height: 184px;
     margin: 0 auto;
     position: relative;
     width: 1009px;
@@ -41,13 +39,13 @@ header.banner {
       color: white;
       font-family: 'leaguegothic', helvetica;
       font-size: 24px;
-      left: 397px;
+      left: 379px;
       position: absolute;
       text-shadow: 1px 1px 1px black;
       top: 114px;
       z-index: 99;
       &.about {
-        left: 580px;
+        left: 574px;
       }
       a {
         color: white;
