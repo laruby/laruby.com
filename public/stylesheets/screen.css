@@ -290,3 +290,31 @@ section .info li {
   position: absolute;
   top: -85px;
 }
+
+#youtube_channel {
+  width: auto;
+}
+#youtube_channel .yt-channel-title {
+  display: none;
+}
+#youtube_channel .yt-channel-list {
+  background-color: #fff;
+}
+#youtube_channel .vid-title {
+  color: #000;
+}
+
+#youtube_channel.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details {
+  height: auto;
+  width: 73px;
+}
+
+.yt-channel-copy {
+  display: none;
+}
+
+.youtube-header {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+}
