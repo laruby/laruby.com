@@ -1,16 +1,19 @@
 %div.contents.container
   %section
     %header 
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_tweet"></a>
+      <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50b802b12b37e162"></script>
+      <!-- AddThis Button END -->
       %h1 LARuby on the web
     .info
       %ul
         %li
-          %a{:href => 'http://meetup.com/laruby'}
-            Meetup.com
-        %li
-          Follow
-          %a{:href => 'http://twitter.com/laruby'} laruby
-          on twitter
+          <a href="https://twitter.com/laruby" class="twitter-follow-button" data-show-count="false">Follow @laruby</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         %li
           %a{:href => 'http://www.linkedin.com/groups/LARuby-1089287?gid=1089287'} LinkedIn group
         %li
@@ -19,16 +22,17 @@
         %li
           IRC:
           %span.bold #laruby
-          channel on Freenode
-        %li
-          %a{:href => 'http://github.com/laruby'}LARuby
-          on Github
+          Freenode
         %li
           %a{:href => "http://www.youtube.com/losangelesruby"} Youtube Channel
+        %li
+          %a{:href => 'http://meetup.com/laruby'}
+            Meetup.com
   %section.center
     .tagline
       BRINGING TOGETHER THE LOS ANGELES RUBY COMMUNITY
-    %header #LARuby on Twitter
+    %header 
+      %h1 #LARuby on Twitter
     #LARubyfeed
     .showmore
       %a{:href => 'http://twitter.com/laruby'}
@@ -37,7 +41,8 @@
       Design and logo are courtesy of
       %a{:href => 'http://hybridgroup.com'} The Hybrid Group
   %section.last
-    %h1 %header LARuby meetup
+    %header 
+      %h1 LARuby meetup
     - @meetups.each do |meetup|
       .name
         = meetup.name

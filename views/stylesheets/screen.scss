@@ -151,6 +151,7 @@ section {
     font-family: helvetica;
     font-weight: 600;
     margin-top: 150px;
+    position: relative;
   }
   .info {
     line-height: 20px;
@@ -159,7 +160,12 @@ section {
       font-weight: 700;
     }
     ul {
-      margin: 10px 0 0 10px;
+      margin: 10px 0 0 0px;
+    }
+    li {
+      list-style: circle;
+      margin-bottom: 9px;
+      margin-left: 20px;
     }
   }
 }
@@ -193,3 +199,8 @@ section {
   }
 }
 
+
+.addthis_toolbox {
+  position: absolute;
+  top: -85px;
+}

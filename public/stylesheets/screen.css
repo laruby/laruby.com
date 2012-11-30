@@ -231,6 +231,7 @@ section header {
   font-family: helvetica;
   font-weight: 600;
   margin-top: 150px;
+  position: relative;
 }
 section .info {
   line-height: 20px;
@@ -240,7 +241,12 @@ section .info .bold {
   font-weight: 700;
 }
 section .info ul {
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 0px;
+}
+section .info li {
+  list-style: circle;
+  margin-bottom: 9px;
+  margin-left: 20px;
 }
 
 #LARubyfeed {
@@ -278,4 +284,9 @@ section .info ul {
 }
 #LARubyfeed span.tweet_time a {
   color: #005db8;
+}
+
+.addthis_toolbox {
+  position: absolute;
+  top: -85px;
 }
