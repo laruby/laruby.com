@@ -1,0 +1,57 @@
+%div.contents.container
+  %section
+    %header 
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style ">
+      <a class="addthis_button_tweet"></a>
+      <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-50b802b12b37e162"></script>
+      <!-- AddThis Button END -->
+      %h1 LARuby on the web
+    .info
+      %ul
+        %li
+          <a href="https://twitter.com/laruby" class="twitter-follow-button" data-show-count="false">Follow @laruby</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        %li
+          %a{:href => 'http://www.linkedin.com/groups/LARuby-1089287?gid=1089287'} LinkedIn group
+        %li
+          Code Jam
+          %a{:href => 'http://groups.google.com/group/laruby-codejam'} LARuby
+        %li
+          IRC:
+          %span.bold #laruby
+          Freenode
+        %li
+          %a{:href => "http://www.youtube.com/losangelesruby"} Youtube Channel
+        %li
+          %a{:href => 'http://meetup.com/laruby'}
+            Meetup.com
+  %section.center
+    .tagline
+      BRINGING TOGETHER THE LOS ANGELES RUBY COMMUNITY
+    %header
+      %h1 @LARuby on Twitter
+    #twitter_feed
+      <a class="twitter-timeline" href="https://twitter.com/laruby" data-border-color="#ffffff" data-widget-id="350748595949019138" width="650">Tweets by @laruby</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    .showmore
+      %a{:href => 'http://twitter.com/laruby'}
+        Show more tweets
+    %footer
+      Design and logo are courtesy of
+      %a{:href => 'http://hybridgroup.com'} The Hybrid Group
+  %section.last
+    %header
+      %h1 LARuby meetup
+    - @meetups.each do |meetup|
+      .name
+        = meetup.name
+      .time
+        = meetup.time.to_s.split('T').join(' ')
+      .url
+        %a{:href => "#{meetup.event_url}"}
+          RSVP
+    %h2.youtube-header Recent Videos:
+    #youtube_channel &nbsp;

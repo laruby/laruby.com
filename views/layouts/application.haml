@@ -1,0 +1,20 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", 'xml:lang' => "en" }
+  %head
+    %title= @title || "LARuby.com"
+    %link{:href => "/stylesheets/screen.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "/stylesheets/jquery.youtubechannel.css", :media => "screen, projection", :rel => "stylesheet", :type => "text/css"}/
+    /[if IE]
+      <link href="/rtylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    %script{:type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
+    %script{:type => "text/javascript", :src => "javascripts/jquery.youtubechannel.js"}
+    %script{:type => "text/javascript", :src => "javascripts/application.js"}
+  %body
+    %header.banner
+      .icon-topbanner
+        %span
+          %a{:href => '/'}HOME
+        %span.about
+          %a{:href => '/about'}ABOUT
+
+    =yield

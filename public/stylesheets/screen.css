@@ -1,0 +1,287 @@
+.icon-sprite, .icon-hollywood, .icon-labuildings, .icon-larubybannerstrips, .icon-larubylogo, .icon-larubyribbon, .icon-topbanner {
+  background: url('../images/icon-s31308180b6.png') no-repeat;
+}
+
+.icon-hollywood {
+  background-position: 0 0;
+}
+
+.icon-labuildings {
+  background-position: 0 -71px;
+}
+
+.icon-larubybannerstrips {
+  background-position: 0 -192px;
+}
+
+.icon-larubylogo {
+  background-position: 0 -328px;
+}
+
+.icon-larubyribbon {
+  background-position: 0 -497px;
+}
+
+.icon-topbanner {
+  background-position: 0 -545px;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* Layout ------------------------------------------------------------------*/
+.container {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  font-family: helvetica;
+}
+
+@font-face {
+  font-family: "leaguegothic";
+  src: url("/font/League_Gothic.otf");
+}
+
+a {
+  color: #dc244e;
+  text-decoration: none;
+}
+
+header.banner {
+  background: url("/images/larubybannerstrips.png") repeat-x;
+  height: 134px;
+}
+header.banner div.icon-topbanner {
+  clear: both;
+  display: block;
+  height: 184px;
+  margin: 0 auto;
+  position: relative;
+  width: 1009px;
+  z-index: 224;
+}
+header.banner div.icon-topbanner span {
+  color: white;
+  font-family: 'leaguegothic', helvetica;
+  font-size: 24px;
+  left: 379px;
+  position: absolute;
+  text-shadow: 1px 1px 1px black;
+  top: 114px;
+  z-index: 99;
+}
+header.banner div.icon-topbanner span.about {
+  left: 574px;
+}
+header.banner div.icon-topbanner span a {
+  color: white;
+}
+header.banner div.icon-larubylogo {
+  clear: both;
+  display: block;
+  height: 169px;
+  margin: 0 auto;
+  position: relative;
+  top: 12px;
+  width: 203px;
+}
+
+section {
+  display: inline;
+  float: left;
+  width: 22.449%;
+  margin-right: 2.041%;
+}
+section.center {
+  display: inline;
+  float: left;
+  width: 463px;
+  background: #ece6e6;
+  padding-right: 15px;
+  margin-right: 0;
+  min-height: 1080px;
+}
+section.center .tagline {
+  text-shadow: 1px 1px 1px white;
+  background: #f7f4f4;
+  color: #dc244e;
+  font-family: 'leaguegothic', helvetica;
+  font-size: 30px;
+  margin-left: 1px;
+  text-align: center;
+  line-height: 157px;
+  height: 120px;
+  width: 476px;
+}
+section.center .showmore {
+  text-shadow: 1px 1px 1px white;
+  color: #dc244e;
+  font-family: 'leaguegothic', helvetica;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+}
+section.center .about {
+  background: #f7f4f4;
+  margin-left: 1px;
+  top: -30px;
+  position: relative;
+  height: 245px;
+  width: 476px;
+}
+section.center .about header {
+  padding-top: 70px;
+}
+section.center header {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+section.center article {
+  padding: 20px;
+  line-height: 20px;
+}
+section.center article span {
+  padding: 10px 0;
+  float: left;
+}
+section.center footer {
+  text-shadow: 1px 1px 1px white;
+  clear: both;
+  font-size: 12px;
+  padding: 80px 0 30px;
+  text-align: center;
+  width: 478px;
+}
+section.last {
+  line-height: 18px;
+}
+section.last header {
+  margin-left: 10px;
+}
+section.last div {
+  margin-left: 10px;
+}
+section.last div.name {
+  color: #dc244e;
+  font-weight: 700;
+  margin-top: 36px;
+}
+section.last div.time {
+  font-size: 12px;
+}
+section header {
+  text-shadow: 1px 1px 1px white;
+  color: #005db8;
+  font-size: 20px;
+  font-family: helvetica;
+  font-weight: 600;
+  margin-top: 150px;
+  position: relative;
+}
+section .info {
+  line-height: 20px;
+  margin-top: 35px;
+}
+section .info .bold {
+  font-weight: 700;
+}
+section .info ul {
+  margin: 10px 0 0 0px;
+}
+section .info li {
+  list-style: circle;
+  margin-bottom: 9px;
+  margin-left: 20px;
+}
+
+#twitter_feed {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.addthis_toolbox {
+  position: absolute;
+  top: -85px;
+}
+
+#youtube_channel {
+  width: auto;
+}
+#youtube_channel .yt-channel-title {
+  display: none;
+}
+#youtube_channel .yt-channel-list {
+  background-color: #fff;
+}
+#youtube_channel .vid-title {
+  color: #000;
+}
+
+#youtube_channel.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details {
+  height: auto;
+  width: 73px;
+}
+
+.yt-channel-copy {
+  display: none;
+}
+
+.youtube-header {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+}

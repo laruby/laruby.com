@@ -1,0 +1,21 @@
+@charset "utf-8";
+.yt-channel-holder { width: 300px; font-size: 14px; }
+.yt-channel-holder .yt-channel-list { background-color:  #000; list-style-position: outside; list-style-type: none; margin: 0; padding: 0; }
+.yt-channel-holder .yt-channel-list .yt-channel-title { background: #ccc url('yt-logo.png') scroll no-repeat 2px 2px; height: 16px; padding-left: 100px; padding-top: 14px; padding-bottom: 14px; line-height: 16px; font-size: 14px; font-weight: bold; text-align: center; color: #fff; }
+.yt-channel-holder .yt-channel-list .yt-channel-title a { text-decoration: none; color: #fff; }
+.yt-channel-holder .yt-channel-list .yt-channel-title a:hover { text-shadow: 1px 1px 2px #999; }
+
+.yt-channel-holder .yt-channel-list .yt-channel-video { margin-bottom: 10px; padding: 2px 4px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover { background-color: #333; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a { display: block; overflow: hidden; text-decoration: none; color: #fff; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap { position: relative; float: left; margin: 0 6px 0 0; padding: 4px; border: 1px solid #ddd; background-color: #666; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap img.vid-thumb { width: 96px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .thumb-wrap span.vid-duration { display: block; padding-left: 3px; font-size: 12px; font-weight: bold; background-color: #444; color: #eee; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details { position: relative; float: left; width: 180px; height: 82px; color: #fff; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details span.vid-title { font-size: 14px; }
+.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details span.vid-views { display: block; color: #888; font-size: 12px; }
+
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover { background-color: #333; }
+.yt-channel-holder .yt-channel-list .yt-channel-video:hover a .vid-details span.vid-title { text-decoration: underline; }
+
+.yt-channel-holder .yt-channel-list .yt-channel-copy { height: 12px; line-height: 10px; font-size: 10px; text-align: right; color: #444; }

@@ -1,0 +1,230 @@
+// Imports -------------------------------------------------------------------
+
+@import "compass";
+@import "base";
+@import "blueprint";
+@import "compass/reset";
+
+/* Layout ------------------------------------------------------------------*/
+
+.container {
+  @include container;
+  font-family: helvetica;
+}
+
+@font-face {
+  font-family: "leaguegothic";
+  src: url('/font/League_Gothic.otf');
+}
+
+a {
+  color: #dc244e;
+  text-decoration: none;
+}
+
+$pinkish : #dc244e;
+
+header.banner {
+  background: url("/images/larubybannerstrips.png") repeat-x;
+  height: 134px;
+  div.icon-topbanner {
+    clear: both;
+    display: block;
+    height: 184px;
+    margin: 0 auto;
+    position: relative;
+    width: 1009px;
+    z-index: 224;
+    span {
+      color: white;
+      font-family: 'leaguegothic', helvetica;
+      font-size: 24px;
+      left: 379px;
+      position: absolute;
+      text-shadow: 1px 1px 1px black;
+      top: 114px;
+      z-index: 99;
+      &.about {
+        left: 574px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+  div.icon-larubylogo {
+    clear: both;
+    display: block;
+    height: 169px;
+    margin: 0 auto;
+    position: relative;
+    top: 12px;
+    width: 203px;
+  }
+}
+
+$centercolor: #ECE6E6;
+$lightercenter: lighten($centercolor, 5%);
+section {
+  @include columns(3);
+  // padding-left: 20px;
+  &.center {
+    @include columns(6);
+    background: $centercolor;
+    padding-right: 33px;
+    margin-right: 0;
+    min-height: 1080px;
+    .tagline {
+      @include text-shadow(1px 1px 1px white);
+      background: $lightercenter;
+      color: $pinkish;
+      font-family: 'leaguegothic', helvetica;
+      font-size: 30px;
+      margin-left: 1px;
+      text-align: center;
+      line-height: 157px;
+      height: 120px;
+      width: 476px;
+    }
+    .showmore {
+      @include text-shadow(1px 1px 1px white);
+      color: $pinkish;
+      font-family: 'leaguegothic', helvetica;
+      font-size: 25px;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .about {
+      background: $lightercenter;
+      margin-left: 1px;
+      top: -30px;
+      position: relative;
+      height: 245px;
+      width: 476px;
+      header {
+        padding-top: 70px;
+      }
+    }
+
+    header {
+      margin-left: 10px;
+      margin-top: 30px;
+    }
+    article {
+      padding: 20px;
+      line-height: 20px;
+      span {
+        padding: 10px 0;
+        float: left;
+      }
+    }
+    footer {
+      @include text-shadow(1px 1px 1px white);
+      clear: both;
+      font-size: 12px;
+      padding: 80px 0 30px;
+      text-align: center;
+      width: 478px;
+    }
+  }
+  &.last {
+    line-height: 18px;
+    header {
+      margin-left: 10px;
+    }
+    div {
+      margin-left: 10px;
+      &.name {
+        color: $pinkish;
+        font-weight: 700;
+        margin-top: 36px;
+      }
+      &.time {
+        font-size:12px;
+      }
+    }
+  }
+  header {
+    @include text-shadow(1px 1px 1px white);
+    color: #005db8;
+    font-size: 20px;
+    font-family: helvetica;
+    font-weight: 600;
+    margin-top: 150px;
+    position: relative;
+  }
+  .info {
+    line-height: 20px;
+    margin-top: 35px;
+    .bold {
+      font-weight: 700;
+    }
+    ul {
+      margin: 10px 0 0 0px;
+    }
+    li {
+      list-style: circle;
+      margin-bottom: 9px;
+      margin-left: 20px;
+    }
+  }
+}
+
+#LARubyfeed {
+  @include pie-clearfix;
+  li {
+    float: left;
+    line-height: 17px;
+    margin-top: 10px;
+    a.tweet_avatar {
+      float: left;
+      padding: 10px 20px 20px;
+      img {
+        @include border-radius(5);
+      }
+    }
+    .tweet_time {
+      font-size: 11px;
+      font-style: oblique;
+    }
+    .tweet_text {
+      float: left;
+      width: 350px;
+    }
+  }
+  span.tweet_time {
+    a {
+      color: #005db8;
+    }
+  }
+}
+
+
+.addthis_toolbox {
+  position: absolute;
+  top: -85px;
+}
+#youtube_channel {
+  width: auto;
+  .yt-channel-title {
+    display: none;
+  }
+  .yt-channel-list {
+    background-color: #fff;
+  }
+  .vid-title {
+    color: #000;
+  }
+}
+#youtube_channel.yt-channel-holder .yt-channel-list .yt-channel-video a .vid-details {
+  height: auto;
+  width: 73px;
+}
+.yt-channel-copy {
+  display: none;
+}
+.youtube-header {
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 10px;
+}
