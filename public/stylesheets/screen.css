@@ -149,10 +149,9 @@ section {
 section.center {
   display: inline;
   float: left;
-  width: 46.939%;
-  margin-right: 2.041%;
+  width: 463px;
   background: #ece6e6;
-  padding-right: 33px;
+  padding-right: 15px;
   margin-right: 0;
   min-height: 1080px;
 }
@@ -249,41 +248,9 @@ section .info li {
   margin-left: 20px;
 }
 
-#LARubyfeed {
-  *zoom: 1;
-}
-#LARubyfeed:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#LARubyfeed li {
-  float: left;
-  line-height: 17px;
+#twitter_feed {
+  margin-left: 15px;
   margin-top: 10px;
-}
-#LARubyfeed li a.tweet_avatar {
-  float: left;
-  padding: 10px 20px 20px;
-}
-#LARubyfeed li a.tweet_avatar img {
-  -moz-border-radius: 5;
-  -webkit-border-radius: 5;
-  -o-border-radius: 5;
-  -ms-border-radius: 5;
-  -khtml-border-radius: 5;
-  border-radius: 5;
-}
-#LARubyfeed li .tweet_time {
-  font-size: 11px;
-  font-style: oblique;
-}
-#LARubyfeed li .tweet_text {
-  float: left;
-  width: 350px;
-}
-#LARubyfeed span.tweet_time a {
-  color: #005db8;
 }
 
 .addthis_toolbox {
